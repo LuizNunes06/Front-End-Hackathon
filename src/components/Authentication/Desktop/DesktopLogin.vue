@@ -15,7 +15,7 @@ const toggleVisibility = () => {
 
 <template>
     <div class="logo">
-        <img src="../../../../public/logoIf.png" alt="">
+        <img src="../../../../public/logo-IF.png" alt="">
         <h1>Faça login</h1>
     </div>
 
