@@ -11,5 +11,6 @@ export {
     AgendaDesktop,
     AsideDesktop,
     HeaderDesktop,
-    DefaultTurma
+    DefaultTurma,
+    DefaultStudent,
 }
