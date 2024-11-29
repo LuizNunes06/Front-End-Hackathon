@@ -52,7 +52,7 @@ button{
     height: 4vh;
     width: 15vw;
     border: none;
-    color: white;
+    color: var(--white);
     border-radius: 10px;
     font-size: larger;
     font-weight: bold;
