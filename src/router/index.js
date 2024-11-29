@@ -10,7 +10,7 @@ const router = createRouter({
       children: [
         {
           path: '/',
-          name: 'occurrences',
+          name: 'ocorrencias',
           component: () => import('../views/OccurrencesView.vue'),
         },
         {
