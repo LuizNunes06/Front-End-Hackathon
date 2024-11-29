@@ -16,10 +16,10 @@ const toggleVisibility = () => {
 <template>
     <div class="logo">
         <img src="../../../../public/logoIf.png" alt="">
-    </div>
-    <div class="container">
         <h1>Faça login</h1>
+    </div>
 
+    <div class="container">
         <div class="form">
             <label for="email">Email</label>
             <input type="text" id="email">
@@ -57,7 +57,7 @@ const toggleVisibility = () => {
     }
 
     .form {
-        height: 55%;
+        height: 65%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -124,7 +124,14 @@ const toggleVisibility = () => {
 
     .logo {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        margin: 5% 0 2% 0;
+        margin: 3% 0 2% 0;
+        text-align: center;
+    }
+
+    .logo > img {
+        margin: auto;
+        width: 5%;
     }
 </style>
