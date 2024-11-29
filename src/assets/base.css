@@ -9,7 +9,23 @@
     --gray: #D1D5DA;
     --black: #2B2B2B;
 }
+button {
+    background-color: var(--darker-green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-family: 'Poppins';
+    font-size: 1rem;
+    cursor: pointer;
+}
 
-body {
-    margin: 0;
+.default-filtro {
+    outline: none;
+    width: 10vw;
+    padding: .6rem .2rem;
+    color: var(--darker-gray);
+    border: var(--gray) 1px solid;
+    background-color: var(--white);
+    border-radius: .3rem;
 }
