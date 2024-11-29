@@ -6,8 +6,6 @@ import AccountGroup from "vue-material-design-icons/AccountGroup.vue";
 
 import { RouterLink } from "vue-router";
 
-
-
 </script>
 <template>
     <aside>
