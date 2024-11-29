@@ -9,3 +9,7 @@
     --gray: #D1D5DA;
     --black: #2B2B2B;
 }
+
+body {
+    margin: 0;
+}
