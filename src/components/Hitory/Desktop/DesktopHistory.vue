@@ -12,18 +12,18 @@ function expand(e) {
             <h1>Consultar Histórico</h1>
             <div class="Filtros">
                 <div class="Lista">
-                    <select name="Curso" id="">
+                    <select class="default-filtro" name="Curso" id="">
                         <option value="">Curso</option>
                     </select>
-                    <select name="Turma" id="">
+                    <select class="default-filtro" name="Turma" id="">
                         <option value="">Turma</option>
                     </select>
                 </div>
                 <div class="Lista">
-                    <select name="Ano" id="">
+                    <select class="default-filtro" name="Ano" id="">
                         <option value="">Ano</option>
                     </select>
-                    <select name="Trimestre" id="">
+                    <select class="default-filtro" name="Trimestre" id="">
                         <option value="">Trimestre</option>
                     </select>
                 </div>

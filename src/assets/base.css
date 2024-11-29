@@ -19,3 +19,13 @@ button {
     font-size: 1rem;
     cursor: pointer;
 }
+
+.default-filtro {
+    outline: none;
+    width: 10vw;
+    padding: .6rem .2rem;
+    color: var(--darker-gray);
+    border: var(--gray) 1px solid;
+    background-color: var(--white);
+    border-radius: .3rem;
+}

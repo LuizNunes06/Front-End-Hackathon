@@ -3,7 +3,7 @@ import LogoutVariant from "vue-material-design-icons/LogoutVariant.vue";
 </script>
 <template>
     <header>
-        <img src="../../../../public/logoIf.png" alt="">
+        <img src="../../../../public/logo-IF.png" alt="">
         <LogoutVariant />
     </header>
 </template>
