@@ -1,10 +1,13 @@
-import DefaultHome from "./Home/DefaultHome.vue";
-import  DefaultOccurrences from './Occurrences/DefaultOccurrences.vue';
-import DefaultHistory from "./Hitory/DefaultHistory.vue";
+import DefaultOccurrences from './Occurrences/DefaultOccurrences.vue';
+import DefaultHistory from "./History/DefaultHistory.vue";
+import AgendaDesktop from './LayoutComponents/DesktopLayout/AgendaDesktop.vue';
+import AsideDesktop from './LayoutComponents/DesktopLayout/AsideDesktop.vue';
+import HeaderDesktop from './LayoutComponents/DesktopLayout/HeaderDesktop.vue';
 
-
-export{
-    DefaultHome,
+export {
     DefaultHistory,
-    DefaultOccurrences
+    DefaultOccurrences,
+    AgendaDesktop,
+    AsideDesktop,
+    HeaderDesktop
 }
