@@ -60,10 +60,9 @@ h1 {
     "head head"
     "list form";
   border: 1px solid var(--gray);
-  width: 50%;
+  width: 50vw;
   height: 80vh;
-  margin: 10vh 20vw;
-  border-radius: 1rem;
+  border-radius: 10px;
 }
 
 .filtro-container {

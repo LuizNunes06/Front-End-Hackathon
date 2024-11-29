@@ -8,7 +8,7 @@ import { RouterLink } from "vue-router";
 
 </script>
 <template>
-    <aside>
+    <div class="side-bar">
         <div class="Conselho">
             <button>+ Criar conselho</button>
         </div>
@@ -18,17 +18,17 @@ import { RouterLink } from "vue-router";
             <RouterLink class="link" to="/sadasd"><Account size="30"/>Consultar Turma</RouterLink>
             <RouterLink class="link" to="/sadasd"><AccountGroup size="30"/>Consultar Aluno</RouterLink>
         </div>
-    </aside>
+    </div>
 </template>
 <style scoped>
-aside{
+.side-bar{
     display: flex;
     flex-direction: column;
     align-items: left;
     background-color: white;
     width: 20vw;
     border-right: 2px solid var(--gray);
-    height: 90vh;
+    height: 89.8vh;
     font-size: larger;
 }
 .Conselho{
@@ -38,7 +38,6 @@ aside{
     margin-top: 5vh;
 }
 .Acoes{
-    font-family: 'Poppins';
     display: flex;
     flex-direction: column;
     margin-top: 5vh;
@@ -69,7 +68,6 @@ p{
     justify-content: left;
     align-items: center;
     gap: 0.5rem;
-    font-family: 'Poppins';
     margin-left: 2vw;
     padding: 1vh;
     
@@ -87,7 +85,6 @@ p:hover{
     justify-content: left;
     align-items: center;
     gap: 0.5rem;
-    font-family: 'Poppins';
     margin-left: 2vw;
     color: var(--black);
     text-decoration: none;

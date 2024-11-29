@@ -2,13 +2,13 @@
 import LogoutVariant from "vue-material-design-icons/LogoutVariant.vue";
 </script>
 <template>
-    <header>
+    <div class="nav-bar">
         <img src="../../../../public/logo-IF.png" alt="">
         <LogoutVariant />
-    </header>
+    </div>
 </template>
 <style scoped>
-header {
+.nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -28,14 +28,13 @@ import CalendarMonthOutline from 'vue-material-design-icons/CalendarMonthOutline
     flex-direction: column;
     justify-self: self-start;
     height: 80vh;
-    font-family: 'Poppins';
+    max-height: 80vh;
     width: 24vw;
     text-align: center;
     align-items: center;
-    margin-top: 5vh;
     position: absolute;
     right: 1vw;
-    border: 2px solid var(--gray);
+    border: 1px solid var(--gray);
     border-radius: 10px;    
 
 }
@@ -44,13 +43,14 @@ import CalendarMonthOutline from 'vue-material-design-icons/CalendarMonthOutline
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    border-bottom: 2px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
     gap: 1rem;
+    padding: 1rem 0;
 }
 .Titulo{
     width: 100%;
     font-weight: bold;
-    border-bottom: 2px solid var(--gray);
+    border-bottom: 1px solid var(--gray);
     padding-top: 2rem ;
     color: var(--darker-green);
 }
