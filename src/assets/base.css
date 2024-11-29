@@ -10,13 +10,17 @@
     --gray: #D1D5DA;
     --black: #2B2B2B;
 }
+
+body{
+    margin: 0;
+}
+
 button {
     background-color: var(--darker-green);
     color: white;
     border: none;
     border-radius: 5px;
     padding: 0.5rem 1rem;
-    font-family: 'Poppins';
     font-size: 1rem;
     cursor: pointer;
 }
