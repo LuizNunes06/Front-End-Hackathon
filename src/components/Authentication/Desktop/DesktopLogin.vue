@@ -1,7 +1,8 @@
 <script setup>
 import { ref } from 'vue';
 
-// import EyeClosed from "vue-material-design-icons/EyeClosed.vue";
+import Eye from "vue-material-design-icons/Eye.vue";
+import EyeClosed from "vue-material-design-icons/EyeClosed.vue";
 
 const isVisible = ref(false);
 
@@ -14,7 +15,7 @@ const toggleVisibility = () => {
 
 <template>
     <div class="logo">
-        <img src="" alt="">
+        <img src="../../../../public/logoIf.png" alt="">
     </div>
     <div class="container">
         <h1>Faça login</h1>
@@ -27,7 +28,8 @@ const toggleVisibility = () => {
             <div class="container-senha">
                 <input :type="isVisible ? 'text' : 'password'" id="senha">
                 <label @click="toggleVisibility">
-                    <!-- <EyeClosed /> -->
+                    <Eye v-if="isVisible"/>
+                    <EyeClosed v-else/>
                 </label>
             </div>
 
@@ -44,14 +46,17 @@ const toggleVisibility = () => {
         padding: 0 2% 0 2%;
         align-content: center;
         text-align: center;
-        width: 20%;
-        height: 45vh;
-        background-color: var(--gray);
+        width: 16%;
+        height: 40vh;
+        background-color: var(--lighter-gray);
         color : var(--black);
+        margin: auto;
+        align-self: center;
+        border: 1px solid var(--gray);
+        border-radius: 10px;
     }
 
     .form {
-        background-color: red;
         height: 55%;
         display: flex;
         flex-direction: column;
@@ -66,31 +71,24 @@ const toggleVisibility = () => {
     }
 
     .form > label {
-        background-color: crimson;
         margin-top: 2%;
         display: flex;
     }
-
-    button {
-        height: 20%;
-        margin-top: 5%;
-        border: none;
-        color: var(--white);
-        background-color: var(--darker-green);
-    }
-
+    
+    
     .container-senha {
         position: relative;
         display: flex;
         width: 100%;
         height: 22%;
-        background-color: aqua;
     }
-
+    
     .container-senha > input {
         width: 100%;
-    }
+        border-radius: 6px;
 
+    }
+    
     .container-senha > label {
         position: absolute;
         right: 0;
@@ -99,5 +97,34 @@ const toggleVisibility = () => {
         height: 100%;
         display: flex;
         align-items: center;
+    }
+
+    button {
+        height: 20%;
+        margin-top: 5%;
+        border: none;
+        border-radius: 6px;
+        color: var(--white);
+        background-color: var(--darker-green);
+        cursor: pointer;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    input {
+        border: 1px solid var(--gray);
+        border-radius: 6px;
+        padding: 0 2%;
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin: 5% 0 2% 0;
     }
 </style>
