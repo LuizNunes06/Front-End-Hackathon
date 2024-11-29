@@ -1,8 +1,9 @@
 <script setup>
+import HeaderDesktop from '@/components/LayoutComponents/DesktopLayout/HeaderDesktop.vue';
 </script>
 
 <template>
-<h1>Desktop</h1>
+<HeaderDesktop/>
 </template>
 
 <style scoped></style>
