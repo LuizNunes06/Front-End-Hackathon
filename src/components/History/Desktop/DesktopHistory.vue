@@ -1,19 +1,18 @@
 <script setup>
-import OccurrenceContainer from "./OccurrenceContainer.vue";
+import HistoryContainer from "./HistoryContainer.vue";
 import AgendaDesktop from "../../LayoutComponents/DesktopLayout/AgendaDesktop.vue";
 </script>
-
 <template>
   <div class="conteiner-conteudo">
-    <OccurrenceContainer />
+    <HistoryContainer />
     <AgendaDesktop />
   </div>
 </template>
 
 <style scoped>
 .conteiner-conteudo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
