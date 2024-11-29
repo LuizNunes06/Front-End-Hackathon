@@ -1,3 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
-    --primary-color: #000000;
+    --red: #D73A49;
+    --darker-green: #3FA14C;
+    --darker-green-opacity: rgba(63,161,76, 0.3);
+    --green: #34D058;
+    --lighter-green: #BBECC9;
+    --white: #ffffff;
+    --lighter-gray: #F2F3F4;
+    --gray: #D1D5DA;
+    --black: #2B2B2B;
+}
+
+body{
+    margin: 0;
+}
+
+button {
+    background-color: var(--darker-green);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.default-filtro {
+    outline: none;
+    width: 10vw;
+    padding: .6rem .2rem;
+    color: var(--darker-gray);
+    border: var(--gray) 1px solid;
+    background-color: var(--white);
+    border-radius: .3rem;
 }

@@ -2,7 +2,8 @@
 </script>
 
 <template>
-<h1>Desktop</h1>
+mobile grade
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>
