@@ -15,7 +15,7 @@ header {
     padding: 0 5vh;
     background-color: var(--lighter-gray);
     height: 10vh;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--gray);
 }
 
 img {
