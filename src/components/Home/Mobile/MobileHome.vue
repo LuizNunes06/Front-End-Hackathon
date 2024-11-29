@@ -1,4 +1,5 @@
 <script setup>
+import NavMobile from '../../LayoutComponents/MobileLayout/NavMobile.vue'
 </script>
 
 <template>
