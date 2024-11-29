@@ -1,5 +1,5 @@
 <script setup>
-    import DesktopOldOccurence from './DesktopOldOccurence.vue'
+    import DesktopOldOccurence from './DesktopOldObservation.vue'
 </script>
 
 <template>
@@ -7,7 +7,7 @@
         <div class="form">
         <div class="ocorrencia">
             <label for="ocurrence">
-                <h1>Ocorrências</h1>
+                <h1>Observações</h1>
             </label>
 
             <input type="text" id="ocurrence">
@@ -75,7 +75,7 @@
         margin: auto;
         display: flex;
         flex-direction: column;
-        width: 55%;
+        width: 78%;
         height: 90vh;
         color: var(--black);
         border: 1px solid var(--gray);
@@ -94,8 +94,6 @@
             height: 32vh;
             border: 1px solid var(--gray);
             border-radius: 10px;
-            text-align: initial;
-            
         }
 
         & input:focus {

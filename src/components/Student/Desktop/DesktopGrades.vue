@@ -115,7 +115,7 @@
 
 <style scoped>
     .container {
-        width: 55%;
+        width: 80%;
         height: 90vh;
         margin: auto;
         font-size: 1.2rem;

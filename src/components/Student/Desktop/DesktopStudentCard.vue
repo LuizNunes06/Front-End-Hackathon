@@ -21,7 +21,6 @@
     .container {
         display: flex;
         height: 50vh;
-        width: 18%;
         justify-content: center;
         align-items: center;
         text-align: center;

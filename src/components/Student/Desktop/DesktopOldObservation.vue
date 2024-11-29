@@ -23,8 +23,8 @@
         border: 1px solid var(--gray);
         padding: 1%;
         border-radius: 10px;
-        width: 26.5%;
-        height: 34vh;
+        width: 35%;
+        height: 30vh;
     }
 
     .data {
