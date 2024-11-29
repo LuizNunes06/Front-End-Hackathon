@@ -1,6 +1,7 @@
 <script setup>
 import CalendarTextOutline from 'vue-material-design-icons/CalendarTextOutline.vue'
 import { ref } from 'vue'
+import NavMobile from '@/components/LayoutComponents/MobileLayout/NavMobile.vue';
 
 const isVisible = ref(false)
 const Others = ref(false)
@@ -25,7 +26,7 @@ function OtherCheckbox(){
 <template>
     <main>
         <h1>Cadastrar Ocorrência</h1>
-        <div class="Filtro" v-if="isVisible">
+        <div class="Filtro" v-if="!isVisible">
             <select name="Turmas" id="" class="default-filtro">
                 <option value="" selected>Filtro</option>
                 <option value="Turma">3info1</option>
@@ -34,11 +35,11 @@ function OtherCheckbox(){
             </select>
 
         </div>
-        <div class="tipo-ocorrencia" @click="Selecao" v-if="isVisible">
+        <div class="tipo-ocorrencia" @click="Selecao" v-if="!isVisible">
             <CalendarTextOutline size="40" />
             <P> Selecionar tipo de ocorrência</P>
         </div>
-        <div class="Alunos" v-if="isVisible">
+        <div class="Alunos" v-if="!isVisible">
 
             <p>Ana Clara Alves de Andrade Hahn</p>
             <p>Bruno</p>
@@ -49,11 +50,11 @@ function OtherCheckbox(){
 
         </div>
 
-        <div class="tipo-ocorrencia" @click="Selecao" v-if="!isVisible">
+        <div class="tipo-ocorrencia" @click="Selecao" v-if="isVisible">
             <CalendarTextOutline size="40" />
             <P> Selecionar Aluno</P>
         </div>
-        <div class="selecao-ocorrencia" v-if="!isVisible">
+        <div class="selecao-ocorrencia" v-if="isVisible">
             <div class="aluno-info">
                 <p>Nome do Aluno</p>
                 <p>3info1</p>
@@ -89,7 +90,7 @@ function OtherCheckbox(){
         </div>
 
 
-
+    <NavMobile/>
     </main>
 </template>
 
@@ -118,6 +119,7 @@ main {
     gap: 2rem;
     margin-top: 5vh;
     width: 100%;
+    margin-bottom: 12vh;
 }
 
 h1 {
