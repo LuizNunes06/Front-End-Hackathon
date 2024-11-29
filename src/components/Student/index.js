@@ -1,11 +1,19 @@
 import DesktopGrades from "./Desktop/DesktopGrades.vue";
-import DesktopOccurences from "./Desktop/DesktopOccurences.vue";
+import DesktopOccurence from "./Desktop/DesktopOccurence.vue";
+import DesktopOldOccurence from "./Desktop/DesktopOldOccurence.vue";
+import DesktopStudentCard from "./Desktop/DesktopStudentCard.vue";
 import MobileGrades from "./Mobile/MobileGrades.vue";
-import MobileOccurences from "./Mobile/MobileOccurences.vue";
+import MobileOccurence from "./Mobile/MobileOccurence.vue";
+import MobileOldOccurence from "./Mobile/MobileOldOccurence.vue";
+import MobileStudentCard from "./Mobile/MobileStudentCard.vue";
 
 export {
     DesktopGrades,
-    DesktopOccurences,
+    DesktopOccurence,
+    DesktopStudentCard,
+    DesktopOldOccurence,
     MobileGrades,
-    MobileOccurences
+    MobileOccurence,
+    MobileOldOccurence,
+    MobileStudentCard,
 }
