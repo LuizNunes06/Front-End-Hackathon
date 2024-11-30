@@ -29,7 +29,7 @@ function Selecao() {
 
 .default-filter {
   width: 100%;
-  height: 6vh;
+  height: 5vh;
   font-family: 'Poppins';
   display: flex;
   justify-content: space-around;
