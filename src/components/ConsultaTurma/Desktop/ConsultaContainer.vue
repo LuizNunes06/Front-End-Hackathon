@@ -11,11 +11,11 @@ import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAler
       <h1>Consulta de Turma</h1>
       <div class="Filtros">
         <div class="Selecao">
-          <div class="Filtro">
-            <select name="curso" id="" class="default-filtro">
+          <div class="filtro">
+            <select name="curso" id="" class="default-filter">
               <option value="">Curso</option>
             </select>
-            <select name="turma" id="" class="default-filtro">
+            <select name="turma" id="" class="default-filter">
               <option value="">Turma</option>
             </select>
           </div>
@@ -273,7 +273,7 @@ hr {
   gap: 1rem;
 }
 
-.Filtro {
+.filtro {
   display: flex;
   flex-direction: row;
   gap: 1rem;
