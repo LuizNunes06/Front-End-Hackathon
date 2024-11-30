@@ -1,6 +1,5 @@
 <script setup>
-import MobileOccurrences from "./Mobile/MobileOccurrences.vue";
-import DesktopOccurrences from "./Desktop/DesktopOccurrences.vue";
+import { DesktopOccurrences, MobileOccurrences } from "./index.js";
 
 import { useScreen } from "../../composables";
 

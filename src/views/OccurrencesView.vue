@@ -1,5 +1,5 @@
 <script setup>
-import {DefaultOccurrences} from "../components"
+import { DefaultOccurrences } from "../components"
 </script>
 
 <template>

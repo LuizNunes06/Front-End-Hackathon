@@ -1,10 +1,9 @@
 <script setup>
-import ClipBoardAlert from "vue-material-design-icons/ClipboardAlert.vue";
-import History from "vue-material-design-icons/History.vue";
-import Account from "vue-material-design-icons/Account.vue";
-
 import { RouterLink } from "vue-router";
+
+import { ClipBoardAlert, History, Account } from "@/components/icons";
 </script>
+
 <template>
   <div class="side-bar">
       <RouterLink class="link" to="/"
@@ -18,6 +17,7 @@ import { RouterLink } from "vue-router";
       >
     </div>
 </template>
+
 <style scoped>
 .side-bar {
   position: fixed;

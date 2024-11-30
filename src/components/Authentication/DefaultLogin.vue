@@ -1,6 +1,5 @@
 <script setup>
-    import DesktopLogin from "./Desktop/DesktopLogin.vue";
-    import MobileLogin from "./Mobile/MobileLogin.vue";
+    import { DesktopLogin, MobileLogin } from "./index.js"
 
     import { useScreen } from "@/composables/screen/screen.js";
 

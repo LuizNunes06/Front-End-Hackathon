@@ -22,9 +22,9 @@ const toggleVisibility = () => {
             <label for="email">Email</label>
             <input type="text" id="email" >
 
-            <label for="senha">Senha</label>
-            <div class="container-senha">
-                <input :type="isVisible ? 'text' : 'password'" id="senha">
+            <label for="psswd">Senha</label>
+            <div class="container-psswd">
+                <input :type="isVisible ? 'text' : 'password'" id="psswd">
                 <label @click="toggleVisibility">
                     <Eye v-if="isVisible"/>
                     <EyeOff v-else/>
@@ -78,20 +78,20 @@ h1 {
     }
     
     
-    .container-senha {
+    .container-psswd {
         position: relative;
         display: flex;
         width: 100%;
         height: 22%;
     }
     
-    .container-senha > input {
+    .container-psswd > input {
         width: 100%;
         border-radius: 6px;
 
     }
     
-    .container-senha > label {
+    .container-psswd > label {
         position: absolute;
         right: 0;
         top: 0;

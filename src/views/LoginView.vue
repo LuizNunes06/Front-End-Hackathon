@@ -1,5 +1,5 @@
 <script setup>
-import DefaultLogin from "@/components/Authentication/DefaultLogin.vue";
+import { DefaultLogin } from "@/components";
 </script>
 
 <template>

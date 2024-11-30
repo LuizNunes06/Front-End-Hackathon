@@ -4,20 +4,22 @@
     <div class="head-container">
       <h1>Cadastrar ocorrência</h1>
       <div class="filtro-container">
-        <select name="Curso" id="" placeholder="Curso" class="default-filtro">
+        <select name="Curso" id="" placeholder="Curso" class="default-filter">
           <option value="" disabled selected>Curso</option>
         </select>
-        <select name="Turma" id="" class="default-filtro">
+        <select name="Turma" id="" class="default-filter">
           <option value="" disabled selected>Turma</option>
         </select>
-      </div>
+      </div> 
     </div>
+
     <div class="list-container">
       <span class="card-aluno">
         <input type="checkbox" id="studant" />
         <label class="studant-name" for="studant">Isadora Alcantara Xavier da Silva</label>
       </span>
     </div>
+
     <div class="occurence-form">
       <span class="check-container">
         <input type="checkbox" id="uniform" />

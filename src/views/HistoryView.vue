@@ -1,5 +1,5 @@
 <script setup>
-import {DefaultHistory} from "../components"
+import { DefaultHistory } from "../components"
 </script>
 <template>
   <main>
