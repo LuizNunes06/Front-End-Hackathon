@@ -4,15 +4,15 @@ import StudentService from '@/services/students'
 
 export const useStudentsStore = defineStore('student', () => {
   const state = reactive({
-    students: []
+    students: [],
+    currentStudent:[] 
   })
-
   const students = computed(() => state.students)
 
-  const getAllStudents = async () => {
-    const data = await StudentService.getAllStudents()
+  const getAllStudents = async (classId, course, name) => {
+    const data = await StudentService.getAllStudents(classId, course, name)
     state.students = data
   }
-  
+
   return { students, getAllStudents }
 })

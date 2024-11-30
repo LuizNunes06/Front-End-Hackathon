@@ -5,22 +5,32 @@ import ClockAlertOutline from "vue-material-design-icons/ClockAlertOutline.vue";
 import CalendarAlert from "vue-material-design-icons/CalendarAlert.vue";
 import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAlertOutline.vue";
 
-import { useStudentsStore } from "@/stores/students";
-import { onMounted } from "vue";
+import { useStudentsStore, useClassesStore, useCoursesStore } from "@/stores";
+
+import { onMounted, reactive } from "vue";
 
 const studentStore = useStudentsStore();
+const classesStore = useClassesStore();
+const coursesStore = useCoursesStore();
 
-
-async function getStudents() {
-  await studentStore.getAllStudents();
-  console.log(studentStore.students)
+async function getInformations(classId, course, name) {
+  await studentStore.getAllStudents(classId, course, name);
+  await classesStore.getAllClasses();
+  await coursesStore.getAllCourses();
 }
 onMounted(async () => {
-  await getStudents();
+  await getInformations(filters.class, filters.course, filters.name );
 });
 
-async function changeStudents(page) {
-  await studentStore.getAllStudents(page);
+const filters = reactive({
+  course: null,
+  class: null,
+  name: "",
+});
+
+async function FilterStudents(classId, course, name) {
+  console.log(classId, course, name);
+  await studentStore.getAllStudents(classId, course, name);
 }
 </script>
 <template>
@@ -29,16 +39,32 @@ async function changeStudents(page) {
       <h1>Consulta de Turma</h1>
       <div class="Filtros">
         <div class="Selecao">
-          <div class="filtro">
-            <select name="curso" id="" class="default-filter">
-              <option value="">Curso</option>
+          <div class="Filtro">
+            <select name="curso" id="" class="default-filtro" v-model="filters.course">
+              <option
+                v-for="course of coursesStore.courses.results"
+                :key="course.id"
+                :value="course.id"
+              >
+                {{ course.abreviatura }}
+              </option>
             </select>
-            <select name="turma" id="" class="default-filter">
-              <option value="">Turma</option>
+            <select name="turma" id="" class="default-filtro" v-model="filters.class">
+              <option
+                v-for="classActual of classesStore.classes.results"
+                :key="classActual.id"
+                :value="classActual.id"
+              >
+                {{
+                  classActual.ano +
+                  classActual.curso.abreviatura +
+                  (classActual.numeracao ? classActual.numeracao : "")
+                }}
+              </option>
             </select>
           </div>
           <div class="Especificacao">
-            <input type="text" class="Nome" placeholder="Nome" />
+            <input type="text" class="Nome" placeholder="Nome" v-model="filters.name" />
             <div class="check-list">
               <span class="check-container">
                 <input type="checkbox" id="text" class="check-texto" />
@@ -62,6 +88,8 @@ async function changeStudents(page) {
           <p><FileDocumentAlertOutline size="20" class="Torto" />Outros</p>
         </div>
       </div>
+
+      <button @click="FilterStudents(filters.class, filters.course, filters.name)">Filtrar</button>
     </div>
     <hr />
     <div class="Lista">
@@ -73,9 +101,11 @@ async function changeStudents(page) {
           <p><FileDocumentAlertOutline />2</p>
         </div>
         <div class="TextInfo">
-          <p><span class="bold">{{student?.nome}}</span></p>
-          <p>Matricula: {{student?.matricula}}</p>
-          <p>Email: {{student?.email}}</p>
+          <p>
+            <span class="bold">{{ student?.nome }}</span>
+          </p>
+          <p>Matricula: {{ student?.matricula }}</p>
+          <p>Email: {{ student?.email }}</p>
           <button>Ver Detalhes</button>
           <button>Registrar Ocorrência</button>
         </div>
@@ -112,7 +142,8 @@ span.bold {
   border-radius: 1rem;
   align-items: center;
   justify-content: center;
-  margin: 2vh auto;}
+  margin: 2vh auto;
+}
 
 .Aluno1 {
   position: relative;
