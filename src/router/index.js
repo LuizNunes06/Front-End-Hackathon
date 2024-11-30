@@ -9,7 +9,7 @@ const router = createRouter({
       component: () => import('../layouts/DefaultLayout.vue'),
       children: [
         {
-          path: '/ocorrencias',
+          path: '/',
           name: 'ocorrencias',
           component: () => import('../views/OccurrencesView.vue'),
         },

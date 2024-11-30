@@ -53,7 +53,7 @@ async function FilterStudents(classId, course, name) {
       <h1>Consulta de Turma</h1>
       <div class="Filtros">
         <div class="Selecao">
-          <div class="Filtro">
+          <d  iv class="filtro">
             <select name="curso" id="" class="default-filter" v-model="filters.course">
               <option
                 v-for="course of coursesStore.courses.results"
@@ -76,7 +76,7 @@ async function FilterStudents(classId, course, name) {
                 }}
               </option>
             </select>
-          </div>
+          </d>
           <div class="Especificacao">
             <input type="text" class="Nome" placeholder="Nome" v-model="filters.name" />
             <div class="check-list">
@@ -245,6 +245,7 @@ p {
 
 h1 {
   color: var(--darker-green);
+  margin: 0;
 }
 
 hr {
@@ -267,8 +268,10 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   width: 100%;
-  padding-bottom: 2vh;
+  padding: 2vh 0;
+  height: 30vh;
   gap: 1rem;
 }
 
