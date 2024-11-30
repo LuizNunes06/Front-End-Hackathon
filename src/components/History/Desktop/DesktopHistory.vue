@@ -1,11 +1,9 @@
 <script setup>
 import HistoryContainer from "./HistoryContainer.vue";
-import AgendaDesktop from "../../LayoutComponents/DesktopLayout/AgendaDesktop.vue";
 </script>
 <template>
   <div class="conteiner-conteudo">
     <HistoryContainer />
-    <AgendaDesktop />
   </div>
 </template>
 
