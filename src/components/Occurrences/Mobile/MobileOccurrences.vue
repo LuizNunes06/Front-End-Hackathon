@@ -1,16 +1,9 @@
 <script setup>
 import CalendarTextOutline from 'vue-material-design-icons/CalendarTextOutline.vue'
 import { ref } from 'vue'
-import NavMobile from '@/components/LayoutComponents/MobileLayout/NavMobile.vue';
 
 const isVisible = ref(false)
 const Others = ref(false)
-const SelectOccurrence = ref(false)
-
-function SelectIt(){
-
-
-}
 
 function Selecao() {
     isVisible.value = !isVisible.value
@@ -90,7 +83,6 @@ function OtherCheckbox(){
         </div>
 
 
-    <NavMobile/>
     </main>
 </template>
 
