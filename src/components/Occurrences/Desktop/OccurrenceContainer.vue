@@ -1,128 +1,111 @@
-<script setup></script>
-
+<script setup>
+</script>
 <template>
-  <div class="container">
-    <div class="head-container">
-      <h1>Cadastrar ocorrencia</h1>
-      <div class="filtro-container">
-        <select name="Curso" id="" placeholder="Curso" class="default-filter">
-          <option value="" disabled selected>Curso</option>
-        </select>
-        <select name="Turma" id="" class="default-filter">
-          <option value="" disabled selected>Turma</option>
-        </select>
+  <div class="Container">
+    <div class="Top">
+      <h1>Cadastrar Ocorrência</h1>
+      <div class="Filtros">
+        <div class="Lista">
+          <select class="default-filter" name="Curso" id="">
+            <option value="">Curso</option>
+          </select>
+          <select class="default-filter" name="Turma" id="">
+            <option value="">Turma</option>
+          </select>
+        </div>
       </div>
     </div>
-    <div class="list-container">
-      <span class="card-aluno">
-        <input type="checkbox" id="studant" />
-        <label for="studant">Isadora Alcantara Xavier da Silva</label>
-      </span>
-    </div>
-    <div class="occurence-form">
-      <span class="check-container">
-        <input type="checkbox" id="uniform" />
-        <label for="uniform" class="check-customizado"></label>
-        <label for="uniform">Sem uniforme</label>
-      </span>
-      <span class="check-container">
-        <input type="checkbox" id="lateness" />
-        <label for="lateness" class="check-customizado"></label>
-        <label for="lateness">Atraso</label>
-      </span>
-      <span class="check-container">
-        <input type="checkbox" id="reunion" />
-        <label for="reunion" class="check-customizado"></label>
-        <label for="reunion">Reunião no NUPE</label>
-      </span>
-      <span class="check-container">
-        <input type="checkbox" id="text" class="check-texto" />
-        <label for="text" class="check-customizado"></label>
-        <label for="text">Outro</label>
-      </span>
+    <div class="edit-ocorrencia">
+      <div class="list-nome">
+        <p>Ana Clara</p>
+        <p>Ana Clara</p>
+        <p>Ana Clara</p>
+        <p>Ana Clara</p>
+        <p>Ana Clara</p>
+        <p>Ana Clara</p>
+        <p>Ana Clara</p>
+        <p>Ana Clara</p>
+        <p>Ana Clara</p>
+        <p>Ana Clara</p>
+        <p>Ana Clara</p>
+      </div>
+      <div class="cadastro">
+        <div class="check-list">
+          <span class="check-container">
 
-      <textarea rows="" cols=""></textarea>
+            <input type="checkbox" id="Uniforme" class="check-texto" />
+            <label for="Uniforme" class="check-customizado"></label>
+            <label for="Uniforme">Sem Uniforme</label>
+          </span>
+          <span class="check-container">
+            <input type="checkbox" id="Atraso" class="check-texto" />
+            <label for="Atraso" class="check-customizado"></label>
+            <label for="Atraso">Atraso</label>
+          </span>
+          <span class="check-container">
+            <input type="checkbox" id="Nupe" class="check-texto" />
+            <label for="Nupe" class="check-customizado"></label>
+            <label for="Nupe">Reunião no Nupe</label>
+          </span>
+          <span class="check-container">
+            <input type="checkbox" id="outro" class="check-texto" />
+            <label for="outro" class="check-customizado"></label>
+            <label for="outro">Outro</label>
+          </span>
+        </div>
+        <div class="coment">
+          <textarea rows="" cols=""></textarea>
+        </div>
+        <button>Enviar</button>
+      </div>
     </div>
   </div>
 </template>
-
 <style scoped>
-h1 {
-  color: var(--darker-green);
-  font-weight: 600;
+button{
+  width: 10vw;
 }
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 3fr;
-  grid-template-areas:
-    "head head"
-    "list form";
-  border: 1px solid var(--gray);
-  width: 50vw;
-  height: 80vh;
-  border-radius: 10px;
-}
-
-.filtro-container {
-  display: flex;
-  gap: 1vw;
-}
-
-.head-container {
-  grid-area: head;
-  border-bottom: 1px solid var(--gray);
-  gap: 4vh;
+.check-list{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 1rem;
 }
-.list-container {
-  grid-area: list;
-  border-right: 1px solid var(--gray);
-  width: 100%;
-
-  & .card-aluno {
-    display: block;
-    max-width: 100%;
-    padding: 0.5rem;
-  }
-
-  & input {
-    display: none;
-  }
-
-  & label {
-    border-radius: 1rem;
-    display: block;
-    padding: 1rem;
-  }
-
-  & input:checked + label {
-    background-color: var(--lighter-gray);
-    transition: all 0.2s ease-in-out;
-  }
-}
-.occurence-form {
-  grid-area: form;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 2rem;
-  gap: 1.5vh;
-  font-size: 1.2rem;
-}
-
 textarea {
-  height: 100%;
-  width: calc(100% - 2rem);
+  height: 20vh;
+  width: 80%;
   resize: none;
   border-color: var(--gray);
   border-radius: 1rem;
   outline: none;
   padding: 1rem;
 }
+.edit-ocorrencia {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.cadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+}
+
+.list-nome {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 20%;
+  height: 58vh;
+  border-right: 2px solid var(--gray);
+  padding: 3vh;
+}
+
+.list-nome p {
+  margin: 0;
+}
+
 .check-container {
   display: flex;
   gap: 0.8vw;
@@ -132,7 +115,7 @@ textarea {
     display: none;
   }
 
-  & input:checked + .check-customizado {
+  & input:checked+.check-customizado {
     background-color: var(--green);
   }
 
@@ -143,5 +126,89 @@ textarea {
     border: 1px solid var(--green);
     display: inline;
   }
+}
+
+.Comentario {
+  width: 90%;
+  border: 1px solid var(--gray);
+  border-radius: 10px;
+  gap: 0.3rem;
+  padding: 1rem;
+  position: relative;
+  height: auto;
+}
+
+p {
+  margin: 0;
+}
+
+.ListaComent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1rem;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.ListagemComent::-webkit-scrollbar {
+  height: 5px;
+}
+
+.ListagemFilm::-webkit-scrollbar-thumb {
+  background-color: var(--darker-green);
+}
+
+h1 {
+  margin-top: 2vh;
+  color: var(--darker-green);
+  margin-bottom: 2vh;
+}
+
+.Botoes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Lista {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Filtros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 80vh;
+  border: 1px solid var(--gray);
+  border-radius: 10px;
+  gap: 1vh;
+  margin-left: -25vw;
+  margin-top: -7vh;
+}
+
+.Top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 3vh;
+  width: 100%;
+  height: auto;
+  gap: 1rem;
 }
 </style>

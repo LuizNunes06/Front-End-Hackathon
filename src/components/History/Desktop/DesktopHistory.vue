@@ -2,15 +2,9 @@
 import HistoryContainer from "./HistoryContainer.vue";
 </script>
 <template>
-  <div class="conteiner-conteudo">
-    <HistoryContainer />
-  </div>
+  <HistoryContainer />
 </template>
 
 <style scoped>
-.conteiner-conteudo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 </style>
