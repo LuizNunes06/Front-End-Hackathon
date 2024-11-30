@@ -1,12 +1,10 @@
 <script setup>
-import NavMobile from '@/components/LayoutComponents/MobileLayout/NavMobile.vue'
+import NavMobile from '@/components/LayoutComponents/MobileLayout/NavMobile.vue';
 </script>
 
 <template>
-  <main>
-    <RouterView />
-  </main>
-  <NavMobile />
+  <RouterView />
+  <NavMobile/>
 </template>
 
 <style scoped>
