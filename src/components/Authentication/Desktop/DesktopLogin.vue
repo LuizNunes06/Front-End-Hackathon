@@ -8,7 +8,6 @@ const isVisible = ref(false);
 
 const toggleVisibility = () => {
     isVisible.value = !isVisible.value;
-    console.log(isVisible)
 }
 
 </script>
