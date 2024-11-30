@@ -4,8 +4,8 @@ import { AsideDesktop, HeaderDesktop } from "../../components";
 
 <template>
       <HeaderDesktop />
-    <main>
       <AsideDesktop />
+      <main>
       <RouterView />
     </main>
 </template>

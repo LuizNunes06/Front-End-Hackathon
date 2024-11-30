@@ -7,6 +7,7 @@ function OtherCheckbox() {
     Others.value = !Others.value
 }
 
+
 </script>
 
 <template>
