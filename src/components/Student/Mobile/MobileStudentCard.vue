@@ -62,7 +62,7 @@ import FileMultipleOutline from 'vue-material-design-icons/FileMultipleOutline.v
     width: 80%;
     border: 2px solid var(--gray);
     border-radius: 10px;
-    padding: 2vh;
+    padding: 4vh;
 }
 .nome{
     font-size: larger;

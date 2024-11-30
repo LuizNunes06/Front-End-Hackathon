@@ -6,15 +6,13 @@ import { AlertBoxOutline, AccountGroupOutline, History, Menu } from '../../icons
     <router-link to="/ocorrencias">
       <AlertBoxOutline />
     </router-link>
-    <router-link to="/">
+    <router-link to="/turma">
       <AccountGroupOutline />
     </router-link>
     <router-link to="/historico">
       <History />
     </router-link>
-    <router-link to="/fwefwef">
-      <Menu/>
-    </router-link>
+    
   </nav>
 </template>
 <style scoped>
