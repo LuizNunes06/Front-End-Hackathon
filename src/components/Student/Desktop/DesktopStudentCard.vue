@@ -3,11 +3,11 @@
 
 <template>
     <div class="container">
-        <div class="foto-perfil">
+        <div class="profile-picture">
             <img src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2023/05/23/1456119290-vin-diesel-e-dwayne-johnson-3.jpeg"/>
         </div>
 
-        <div class="infos">
+        <div class="info">
             <p>2054365235</p>
             <p>2AGRO3</p>
             <h2>Cleiton Rasta</h2>
@@ -30,7 +30,7 @@
         border: 1px solid var(--gray);
     }
 
-    .foto-perfil > img {
+    .profile-picture > img {
         width: 60%;
     }
 </style>

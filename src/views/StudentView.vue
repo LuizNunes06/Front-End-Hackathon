@@ -1,9 +1,11 @@
 <script setup>
-import { DefaultStudent } from "../components"
+import { DefaultStudent } from "@/components"
 </script>
 
 <template>
-    <DefaultStudent />
+    <main>
+        <DefaultStudent />
+    </main>
 </template>
 
 <style scoped>

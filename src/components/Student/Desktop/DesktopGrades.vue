@@ -6,9 +6,9 @@
         <div class="info">
             <h2>Boletim anual</h2>
         <div class="ano">
-            <button class="btn-ano">2024</button>
-            <button class="btn-ano">2023</button>
-            <button class="btn-ano">2022</button>
+            <button class="btn-year">2024</button>
+            <button class="btn-year">2023</button>
+            <button class="btn-year">2022</button>
         </div>
         </div>
 
@@ -141,7 +141,7 @@
         background-color: var(--white);
     }
 
-    .btn-ano {
+    .btn-year {
         background-color: var(--white);
         color: var(--black);
         width: 10%;
@@ -150,11 +150,11 @@
         border-radius: 0;
     }
 
-    .btn-ano:first-child {
+    .btn-year:first-child {
         border-top-left-radius: 10px;
     }
 
-    .btn-ano:last-child {
+    .btn-year:last-child {
         border-top-right-radius: 10px;
     }
 

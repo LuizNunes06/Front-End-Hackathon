@@ -1,6 +1,7 @@
 <script setup>
 import { AlertBoxOutline, AccountGroupOutline, History, Menu } from '../../icons/index'
 </script>
+
 <template>
   <nav>
     <router-link to="/ocorrencias">
@@ -27,7 +28,6 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
 }
 
 a {

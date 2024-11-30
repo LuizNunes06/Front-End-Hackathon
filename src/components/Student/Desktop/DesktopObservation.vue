@@ -5,36 +5,36 @@
 <template>
     <div class="container">
         <div class="form">
-        <div class="ocorrencia">
-            <label for="ocurrence">
+        <div class="observation">
+            <label for="observation">
                 <h1>Observações</h1>
             </label>
 
-            <input type="text" id="ocurrence">
+            <input type="text" id="observation">
         </div>
 
-        <div class="acoes">
+        <div class="actions">
             <h1>Ação a ser feita</h1>
 
             <div class="options">
                 <span class="check-container">
-                    <input type="checkbox" id="family-school" class="check-texto" />
-                    <label for="family-school" class="check-customizado"></label>
+                    <input type="checkbox" id="family-school" class="text-check" />
+                    <label for="family-school" class="custom-check"></label>
                     <label for="family-school">Reunião Família Escola</label>
                 </span>
                 <span class="check-container">
-                    <input type="checkbox" id="study-club" class="check-texto" />
-                    <label for="study-club" class="check-customizado"></label>
+                    <input type="checkbox" id="study-club" class="text-check" />
+                    <label for="study-club" class="custom-check"></label>
                     <label for="study-club">Participação em Grupo de Estudo</label>
                 </span>
                 <span class="check-container">
-                    <input type="checkbox" id="sisae" class="check-texto" />
-                    <label for="sisae" class="check-customizado"></label>
+                    <input type="checkbox" id="sisae" class="text-check" />
+                    <label for="sisae" class="custom-check"></label>
                     <label for="sisae">Reunião SISAE</label>
                 </span>
                 <span class="check-container">
-                    <input type="checkbox" id="course" class="check-texto" />
-                    <label for="course" class="check-customizado"></label>
+                    <input type="checkbox" id="course" class="text-check" />
+                    <label for="course" class="custom-check"></label>
                     <label for="course">Reunião Coordenação de Curso</label>
                 </span>
             </div>
@@ -42,7 +42,6 @@
         </div>
 
         <DesktopOldOccurence />
-        
     </div>
 </template>
 
@@ -57,11 +56,11 @@
           display: none;
         }
 
-        & input:checked + .check-customizado {
+        & input:checked + .custom-check {
           background-color: var(--green);
         }
 
-        .check-customizado {
+        .custom-check {
           display: relative;
           width: 15px;
           height: 15px;
@@ -82,7 +81,7 @@
         border-radius: 10px;
     }
 
-    .ocorrencia {
+    .observation {
         width: 65%;
         display: flex;
         flex-direction: column;

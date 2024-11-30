@@ -1,6 +1,5 @@
 <script setup>
-import MobileHistory from "./Mobile/MobileHistory.vue";
-import DesktopHistory from "./Desktop/DesktopHistory.vue";
+import { DesktopClass, MobileClass } from "./index.js";
 
 import { useScreen } from "../../composables";
 

@@ -1,8 +1,8 @@
 <script setup>
-import {DefaultTurma} from "../components"
+import { DefaultClass } from "../components"
 </script>
 <template>
   <main>
-    <DefaultTurma />
+    <DefaultClass />
   </main>
 </template>

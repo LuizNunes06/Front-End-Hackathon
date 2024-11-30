@@ -4,13 +4,13 @@
 <template>
     <h1>Observações</h1>
     <div class="container">
-        <div class="data">
+        <div class="date">
             <h4>Observação do dia</h4>
             <h4>21/04/2025</h4>
         </div>
 
-        <div class="observacao">
-            <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+        <div class="observation">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
         </div>
     </div>
 </template>
@@ -27,15 +27,15 @@
         height: 30vh;
     }
 
-    .data {
+    .date {
         display: flex;
     }
 
-    .observacao {
+    .observation {
         display: flex;
     }
 
-    .observacao > p {
+    .observation > p {
         width: 100%;
         word-break: break-all;
         font-size: 0.9rem;
