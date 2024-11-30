@@ -3,15 +3,11 @@ import { AsideDesktop, HeaderDesktop } from "../../components";
 </script>
 
 <template>
-  <section class="body">
-    <header>
       <HeaderDesktop />
-    </header>
     <main>
       <AsideDesktop />
       <RouterView />
     </main>
-  </section>
 </template>
 
 <style scoped>
