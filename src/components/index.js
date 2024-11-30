@@ -13,4 +13,5 @@ export {
     AsideDesktop,
     HeaderDesktop,
     DefaultStudent,
+    DefaultTurma,
 }

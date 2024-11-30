@@ -6,8 +6,6 @@ import {DefaultTurma} from "../components";
 </script>
 <template>
   <main>
-    <HeaderDesktop />
-    <AsideDesktop />
-    <DefaultTurma />
+    <DefaultTurma/>
   </main>
 </template>
