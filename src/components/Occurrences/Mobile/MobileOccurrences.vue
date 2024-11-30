@@ -1,21 +1,9 @@
 <script setup>
 import CalendarTextOutline from 'vue-material-design-icons/CalendarTextOutline.vue'
 import { ref } from 'vue'
-import NavMobile from '@/components/LayoutComponents/MobileLayout/NavMobile.vue';
+import FilterMobileComponent from '../../Form/FilterMobileComponent.vue'
 
-const isVisible = ref(false)
 const Others = ref(false)
-const SelectOccurrence = ref(false)
-
-function SelectIt(){
-
-
-}
-
-function Selecao() {
-    isVisible.value = !isVisible.value
-
-}
 
 function OtherCheckbox(){
     Others.value = !Others.value
@@ -25,29 +13,19 @@ function OtherCheckbox(){
 
 <template>
     <main>
+        <FilterMobileComponent />
         <h1>Cadastrar Ocorrência</h1>
-        <div class="Filtro" v-if="!isVisible">
-            <select name="Turmas" id="" class="default-filtro">
-                <option value="" selected>Filtro</option>
-                <option value="Turma">3info1</option>
-                <option value="Turma">3info2</option>
-                <option value="Turma">3info3</option>
-            </select>
-
-        </div>
         <div class="tipo-ocorrencia" @click="Selecao" v-if="!isVisible">
             <CalendarTextOutline size="40" />
             <P> Selecionar tipo de ocorrência</P>
         </div>
-        <div class="Alunos" v-if="!isVisible">
-
+        <div class="alunos" v-if="!isVisible">
             <p>Ana Clara Alves de Andrade Hahn</p>
             <p>Bruno</p>
             <p>Isadora Alcantara</p>
             <p>José Pinto</p>
             <p>Luis Bombado</p>
             <p>Matheus *****</p>
-
         </div>
 
         <div class="tipo-ocorrencia" @click="Selecao" v-if="isVisible">
@@ -81,36 +59,17 @@ function OtherCheckbox(){
                     <label for="text">Outro</label>
                 </span>
                 <textarea rows="" cols="" v-if="Others"></textarea >
-                    <div class="Enviar">
+                    <div class="enviar">
 
                         <button>Enviar</button>
                     
                     </div>
             </div>
         </div>
-
-
-    <NavMobile/>
     </main>
 </template>
 
 <style scoped>
-.Filtro {
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    border: 2px solid var(--gray);
-    border-radius: 10px;
-    padding: 2rem;
-}
-
-.default-filtro {
-    width: 100%;
-    height: 6vh;
-    font-family: 'Poppins';
-    font-size: 18px;
-    border: 2px solid var(--gray);
-}
 
 main {
     display: flex;
@@ -125,7 +84,6 @@ main {
 h1 {
     font-family: 'Poppins';
     color: var(--darker-green);
-
 }
 
 .tipo-ocorrencia {
@@ -158,7 +116,7 @@ h1 {
     transition: 0.2s ease-in-out;
 }
 
-.Alunos {
+.alunos {
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -171,11 +129,11 @@ h1 {
     font-size: 18px;
 }
 
-.Alunos p {
+.alunos p {
     padding: 0.5rem;
 }
 
-.Alunos p:hover {
+.alunos p:hover {
     background-color: var(--lighter-gray);
     border-radius: 10px;
 }
@@ -207,7 +165,7 @@ textarea {
   outline: none;
   padding: 1rem;
 }
-.Enviar{
+.enviar{
     display: flex;
     justify-content: right;
     padding: 7px;
