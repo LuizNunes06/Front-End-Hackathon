@@ -35,7 +35,20 @@ Veja [a documentação completa](https://docs.google.com/document/d/1vcg9f8ipbVK
 **1.1 Apresentação da empresa:**
 
 <ul>
-  <li>teste</li>
+<li>Versalhes Coffee é uma cafeteria que oferece uma grande variedade de cafés e acompanhamentos como bolos, salgados, etc.</li>
+<li>Projetamos um site online com o objetivo de deixar mais prático a compra de café e acompanhamentos, facilitando assim o alcance de diferentes grupos de pessoas, tanto as mais ocupadas que não podem sair do trabalho para comprar alimentos de qualidade quanto as que possuem problemas de mobilidade.lhes Coffee é uma cafeteria que oferece uma grande variedade de cafés e acompanhamentos como bolos, salgados, etc.</li>
+<li>As tecnologias usadas são: node.js, express, vue.js, JWT, node.js, mongoDB, oRender, vue router, figma e Kanban.</li>
+</ul>
+
+**1.2 Os objetivos do site:**
+<ul>
+<li>Um website de vendas.</li>
+</ul>
+
+**1.3 O público-alvo do website:**
+<ul>
+<li>O grupo-alvo são indivíduos (B2C)</li>
+<li>Clientes do sexo masculino e feminino, na faixa etária de 25 a 45 anos, preocupados com a saúde, e que estavam em busca de um local tranquilo para comer e relaxar</li>
 </ul>
 
 **2.1 Identidade visual:**
