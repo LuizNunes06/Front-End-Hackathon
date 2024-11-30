@@ -11,6 +11,10 @@
     --black: #2B2B2B;
 }
 
+* {
+    font-size: '';
+}
+
 body{
     margin: 0;
 }

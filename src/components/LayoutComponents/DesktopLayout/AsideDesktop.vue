@@ -53,8 +53,6 @@ import { RouterLink } from "vue-router";
     background-color: var(--lighter-gray);
     border-radius: 10px;
     cursor: pointer;
-    scale: 1.006;
-    transition: 0.2s ease-in-out;
 }
 
 .router-link-exact-active {
