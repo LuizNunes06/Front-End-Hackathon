@@ -1,5 +1,5 @@
 <script setup>
-import { DesktopGrades, DesktopStudentCard } from "../index"
+import { DesktopGrades, DesktopOccurence, DesktopStudentCard } from "../index"
 
 </script>
 
@@ -16,6 +16,10 @@ import { DesktopGrades, DesktopStudentCard } from "../index"
 </template>
 
 <style scoped>
+main{
+    display: flex;
+    margin: -4vh 0 0 -5vw !important;
+}
     .info {
         margin-top: 2%;
         display: flex;
@@ -25,10 +29,7 @@ import { DesktopGrades, DesktopStudentCard } from "../index"
 
     .student-card {
         display: flex;
-        justify-content: center;
         margin: 2% 2% 0 0;
-        height: 40vh;
-        width: 45%;
     }
 
 </style>
