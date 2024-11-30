@@ -3,30 +3,31 @@ import { AlertBoxOutline, AccountGroupOutline, History, Menu } from '../../icons
 </script>
 <template>
   <nav>
-    <router-link to="#">
+    <router-link to="/ocorrencias">
       <AlertBoxOutline />
     </router-link>
-    <router-link to="#">
+    <router-link to="/fnsfnsf">
       <AccountGroupOutline />
     </router-link>
-    <router-link to="#">
+    <router-link to="/efwef">
       <History />
     </router-link>
-    <router-link to="#">
-      <Menu />
+    <router-link to="/fwefwef">
+      <Menu/>
     </router-link>
   </nav>
 </template>
 <style scoped>
 nav {
-  position: absolute;
+  position: fixed;
   bottom: 0%;
   background-color: var(--lighter-gray);
   width: 100%;
-  height: 15vw;
+  height: 10vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  
 }
 
 a {

@@ -10,7 +10,7 @@ const router = createRouter({
       children: [
         {
           path: '/',
-          name: 'occurrences',
+          name: 'ocorrencias',
           component: () => import('../views/OccurrencesView.vue'),
         },
         {
@@ -18,6 +18,11 @@ const router = createRouter({
           name: 'historico',
           component: () => import('../views/HistoryView.vue'),
         },
+        {
+          path: '/turma',
+          name: 'turma',
+          component: () => import('../views/ConsultaTurmaView.vue'),
+          },
       ],
     },
     {
