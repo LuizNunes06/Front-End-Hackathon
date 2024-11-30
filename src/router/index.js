@@ -28,11 +28,6 @@ const router = createRouter({
             name: 'aluno',
             component: () => import('../views/StudentView.vue'),
           },
-          {
-            path:  '/obsantigas',
-            name:   'obsantigas',
-            component: () => import('../components/Student/Mobile/MobileOldObservation.vue')
-          }
       ],
     },
     {

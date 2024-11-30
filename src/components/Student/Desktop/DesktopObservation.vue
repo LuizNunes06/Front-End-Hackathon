@@ -10,7 +10,7 @@
                 <h1>Observações</h1>
             </label>
 
-            <input type="text" id="ocurrence">
+            <textarea rows="" cols=""></textarea>
         </div>
 
         <div class="acoes">
@@ -47,11 +47,31 @@
 </template>
 
 <style scoped>
+textarea {
+  height: 100%;
+  width: calc(100% - 2rem);
+  resize: none;
+  border-color: var(--gray);
+  border-radius: 1rem;
+  outline: none;
+  padding: 1rem;
+}
+
+h1{
+    margin: 0;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+
+}
     .check-container {
         display: flex;
         gap: 0.8vw;
         align-items: center;
-        margin: 0.5vh 0;
+ 
 
         & input {
           display: none;
@@ -70,13 +90,21 @@
         }
     }
 
+    .acoes{
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        gap: 4vh;
+        padding: 4vh 1vw;
+    }
+
     .container {
         padding: 1%;
         margin: auto;
         display: flex;
         flex-direction: column;
-        width: 78%;
-        height: 90vh;
+        width: 50vw;
+        height: auto;
         color: var(--black);
         border: 1px solid var(--gray);
         border-radius: 10px;
@@ -86,7 +114,8 @@
         width: 65%;
         display: flex;
         flex-direction: column;
-
+        gap: 4vh;
+        padding: 4vh 1vw;
         & input {
             display: flex;
             justify-self: center;
