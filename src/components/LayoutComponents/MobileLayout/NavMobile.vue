@@ -1,5 +1,5 @@
 <script setup>
-import { AlertBoxOutline, AccountGroupOutline, History, Menu } from '../../icons/index'
+import { AlertBoxOutline, AccountGroupOutline, History, Menu } from '../../icons/index.js'
 </script>
 <template>
   <nav>

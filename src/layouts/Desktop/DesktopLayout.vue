@@ -1,5 +1,5 @@
 <script setup>
-import { AsideDesktop, HeaderDesktop } from "../../components";
+import { AsideDesktop, HeaderDesktop } from "@/components/index.js";
 </script>
 
 <template>
