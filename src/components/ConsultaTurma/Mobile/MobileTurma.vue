@@ -53,8 +53,14 @@ import FileDocumentAlertOutline from 'vue-material-design-icons/FileDocumentAler
                         <p class="nome">nome</p>
                         <p class="comobirdade">comorbidade</p>
                         <p class="gmail">gmail</p>
-                        <button>Ver detalhe</button>
-                        <button>Registrar Ocorrência</button>
+                        <router-link to="/aluno">
+                            <button>Ver detalhe</button>
+    
+                        </router-link>
+                        <router-link to="/ocorrencias">
+                            <button>Registrar Ocorrência</button>
+    
+                        </router-link>
                     </div>
                 </div>
                 <div class="aluno1">
@@ -69,8 +75,14 @@ import FileDocumentAlertOutline from 'vue-material-design-icons/FileDocumentAler
                         <p class="nome">nome</p>
                         <p class="comobirdade">comorbidade</p>
                         <p class="gmail">gmail</p>
-                        <button>Ver detalhe</button>
-                        <button>Registrar Ocorrência</button>
+                        <router-link to="/aluno">
+                            <button>Ver detalhe</button>
+    
+                        </router-link>
+                        <router-link to="/ocorrencias">
+                            <button>Registrar Ocorrência</button>
+    
+                        </router-link>
                     </div>
                 </div>
                 <div class="aluno">
@@ -85,8 +97,14 @@ import FileDocumentAlertOutline from 'vue-material-design-icons/FileDocumentAler
                         <p class="nome">nome</p>
                         <p class="comobirdade">comorbidade</p>
                         <p class="gmail">gmail</p>
-                        <button>Ver detalhe</button>
-                        <button>Registrar Ocorrência</button>
+                        <router-link to="/aluno">
+                            <button>Ver detalhe</button>
+    
+                        </router-link>
+                        <router-link to="/ocorrencias">
+                            <button>Registrar Ocorrência</button>
+    
+                        </router-link>
                     </div>
                 </div>
                 <div class="aluno1">
@@ -101,8 +119,14 @@ import FileDocumentAlertOutline from 'vue-material-design-icons/FileDocumentAler
                         <p class="nome">nome</p>
                         <p class="comobirdade">comorbidade</p>
                         <p class="gmail">gmail</p>
-                        <button>Ver detalhe</button>
-                        <button>Registrar Ocorrência</button>
+                        <router-link to="/aluno">
+                            <button>Ver detalhe</button>
+    
+                        </router-link>
+                        <router-link to="/ocorrencias">
+                            <button>Registrar Ocorrência</button>
+    
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -132,6 +156,7 @@ import FileDocumentAlertOutline from 'vue-material-design-icons/FileDocumentAler
 .aluno{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 45vw;
     border: 2px solid var(--gray);
     border-radius: 10px;
@@ -141,6 +166,7 @@ import FileDocumentAlertOutline from 'vue-material-design-icons/FileDocumentAler
 .aluno1{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 45vw;
     border: 2px solid var(--red);
     border-radius: 10px;

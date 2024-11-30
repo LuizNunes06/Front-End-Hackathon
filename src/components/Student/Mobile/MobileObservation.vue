@@ -1,12 +1,14 @@
 <script setup>
 import { ref } from 'vue'
 
-const isVisible = ref(false)
 
-function Selecao() {
-    isVisible.value = !isVisible.value
+const Others = ref(false)
 
+function OtherCheckbox() {
+    Others.value = !Others.value
 }
+
+
 </script>
 
 <template>
@@ -30,9 +32,10 @@ function Selecao() {
         <label for="reunion">Reunião no NUPE</label>
       </span>
       <span class="check-container">
-        <input type="checkbox" id="text" class="check-texto" />
+        <input type="checkbox" id="text" class="check-texto" @click="OtherCheckbox"/>
         <label for="text" class="check-customizado"></label>
         <label for="text">Outro</label>
+        <textarea rows="" cols="" v-if="Others"></textarea>
       </span>
     </div>
     <div class="botao">
@@ -83,19 +86,21 @@ function Selecao() {
   width: 80%;
   border: 2px solid var(--gray);
   border-radius: 10px;
+
 }
 h1 {
   color: var(--darker-green);
 }
 
+
 textarea {
-  height: 20vh;
-  width: 80%;
-  resize: none;
-  border-color: var(--gray);
-  border-radius: 1rem;
-  outline: none;
-  padding: 1rem;
+    height: 100%;
+    width: calc(100% - 2rem);
+    resize: none;
+    border-color: var(--gray);
+    border-radius: 1rem;
+    outline: none;
+    padding: 1rem;
 }
 .botao {
   display: flex;

@@ -5,12 +5,7 @@ import FilterMobileComponent from '../../Form/FilterMobileComponent.vue'
 import NavMobile from '@/components/LayoutComponents/MobileLayout/NavMobile.vue';
 
 const Others = ref(false)
-const SelectOccurrence = ref(false)
-
-function SelectIt() {
-
-
-}
+const isVisible = ref(false)
 
 function Selecao() {
     isVisible.value = !isVisible.value
@@ -25,8 +20,8 @@ function OtherCheckbox() {
 
 <template>
     <main>
-        <FilterMobileComponent />
         <h1>Cadastrar Ocorrência</h1>
+        <FilterMobileComponent />
         <div class="tipo-ocorrencia" @click="Selecao" v-if="!isVisible">
             <CalendarTextOutline size="40" />
             <P> Selecionar tipo de ocorrência</P>
@@ -35,9 +30,9 @@ function OtherCheckbox() {
             <p>Ana Clara Alves de Andrade Hahn</p>
             <p>Bruno</p>
             <p>Isadora Alcantara</p>
-            <p>José Pinto</p>
-            <p>Luis Bombado</p>
-            <p>Matheus *****</p>
+            <p>José Kahl</p>
+            <p>Luis Felipe Nunes</p>
+            <p>Matheus Vidal</p>
         </div>
 
         <div class="tipo-ocorrencia" @click="Selecao" v-if="isVisible">

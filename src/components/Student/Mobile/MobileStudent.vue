@@ -22,6 +22,7 @@ main{
     height: 100%;
     padding-bottom: 10vh;
     gap: 1rem;
+    margin-top: 2vh;
 }
 h1{
     color: var(--darker-green);
