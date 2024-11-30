@@ -10,6 +10,7 @@ export {
     DefaultHistory,
     DefaultOccurrences,
     AgendaDesktop,
+    DefaultTurma,
     AsideDesktop,
     HeaderDesktop,
     DefaultStudent,

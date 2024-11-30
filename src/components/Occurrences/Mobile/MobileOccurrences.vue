@@ -72,9 +72,10 @@ function OtherCheckbox() {
                 <textarea rows="" cols="" v-if="Others"></textarea>
                 <div class="Enviar">
 
-                    <button>Enviar</button>
 
-                </div>
+                        <button>Enviar</button>
+
+                    </div>
             </div>
         </div>
     </main>
