@@ -3,7 +3,7 @@ import { AsideDesktop, HeaderDesktop } from "../../components";
 </script>
 
 <template>
-  <body>
+  <section class="body">
     <header>
       <HeaderDesktop />
     </header>
@@ -11,11 +11,11 @@ import { AsideDesktop, HeaderDesktop } from "../../components";
       <AsideDesktop />
       <RouterView />
     </main>
-  </body>
+  </section>
 </template>
 
 <style scoped>
-body {
+.body {
   display: grid;
   grid-template-areas:
     "header header"
@@ -29,6 +29,6 @@ header {
 main {
   display: flex;
   grid-area: main;
-  gap: 2vw;
+  gap: 2vw;  
 }
 </style>
