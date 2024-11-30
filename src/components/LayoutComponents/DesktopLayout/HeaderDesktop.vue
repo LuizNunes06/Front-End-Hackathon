@@ -9,6 +9,9 @@ import LogoutVariant from "vue-material-design-icons/LogoutVariant.vue";
 </template>
 <style scoped>
 .nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;

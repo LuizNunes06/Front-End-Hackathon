@@ -1,18 +1,15 @@
 <script setup>
-import { DesktopGrades, DesktopOccurence, DesktopStudentCard, MobileGrades, MobileOccurence, MobileStudentCard } from "./index"
+import MobileStudent from "./Mobile/MobileStudent.vue";
 import DesktopStudent from "./Desktop/DesktopStudent.vue";
 
-import { useScreen } from "@/composables";
+import { useScreen } from "../../composables";
 
 const { isMobile } = useScreen();
 </script>
 
 <template>
-    <component :is="isMobile ? MobileStudentCard : DesktopStudent"/>
-    <!-- <component :is="isMobile ? MobileStudentCard : DesktopStudentCard"/>
-    <component :is="isMobile ? MobileGrades : DesktopGrades" />
-    <component :is="isMobile ? MobileOccurence : DesktopOccurence" /> -->
+  <MobileStudent v-if="isMobile" />
+  <DesktopStudent v-else />
 </template>
-
 <style scoped>
 </style>

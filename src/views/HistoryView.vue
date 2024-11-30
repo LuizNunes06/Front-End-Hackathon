@@ -2,7 +2,7 @@
 import {DefaultHistory} from "../components"
 </script>
 <template>
-  <main>
     <DefaultHistory />
-  </main>
 </template>
+<style scoped>
+</style>
