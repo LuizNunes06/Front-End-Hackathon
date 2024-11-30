@@ -17,6 +17,7 @@ async function getInformations(classId, course, name) {
   await studentStore.getAllStudents(classId, course, name);
   await classesStore.getAllClasses();
   await coursesStore.getAllCourses();
+  console.log(studentStore)
 }
 onMounted(async () => {
   await getInformations(filters.class, filters.course, filters.name );
@@ -40,7 +41,7 @@ async function FilterStudents(classId, course, name) {
       <div class="Filtros">
         <div class="Selecao">
           <div class="Filtro">
-            <select name="curso" id="" class="default-filtro" v-model="filters.course">
+            <select name="curso" id="" class="default-filter" v-model="filters.course">
               <option
                 v-for="course of coursesStore.courses.results"
                 :key="course.id"
@@ -49,7 +50,7 @@ async function FilterStudents(classId, course, name) {
                 {{ course.abreviatura }}
               </option>
             </select>
-            <select name="turma" id="" class="default-filtro" v-model="filters.class">
+            <select name="turma" id="" class="default-filter" v-model="filters.class">
               <option
                 v-for="classActual of classesStore.classes.results"
                 :key="classActual.id"
@@ -88,7 +89,6 @@ async function FilterStudents(classId, course, name) {
           <p><FileDocumentAlertOutline size="20" class="Torto" />Outros</p>
         </div>
       </div>
-
       <button @click="FilterStudents(filters.class, filters.course, filters.name)">Filtrar</button>
     </div>
     <hr />
@@ -107,13 +107,18 @@ async function FilterStudents(classId, course, name) {
           <p>Matricula: {{ student?.matricula }}</p>
           <p>Email: {{ student?.email }}</p>
           <button>Ver Detalhes</button>
-          <button>Registrar Ocorrência</button>
+          <button><router-link to="/"> Registrar Ocorrência</router-link></button>
         </div>
       </div>
     </div>
   </div>
 </template>
 <style scoped>
+a{
+  text-decoration: none;
+  color: var(--white);
+}
+
 span.bold {
   font-weight: bold;
 }

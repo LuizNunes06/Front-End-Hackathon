@@ -1,5 +1,5 @@
 <script setup>
-import { DesktopGrades, DesktopOccurence, DesktopStudentCard } from "../index"
+import { DesktopGrades, DesktopStudentCard } from "../index"
 
 </script>
 
