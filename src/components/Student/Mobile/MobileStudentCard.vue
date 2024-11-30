@@ -1,5 +1,4 @@
 <script setup>
-import SchollOutline from 'vue-material-design-icons/SchoolOutline.vue'
 import FileMultipleOutline from 'vue-material-design-icons/FileMultipleOutline.vue'
 
 
@@ -20,9 +19,8 @@ import FileMultipleOutline from 'vue-material-design-icons/FileMultipleOutline.v
 </div>
 <div class="botao">
 
-  <router-link to="/notas" class="link"> <button  ><SchollOutline size="30"/> Emitir Bolteim </button></router-link>
   <router-link to="/obsantigas" class="link">  <button><FileMultipleOutline size="25"/> Observações passadas</button></router-link>
- 
+
 
 </div>
 </template>

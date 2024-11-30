@@ -1,12 +1,4 @@
 <script setup>
-import { ref } from 'vue'
-
-const isVisible = ref(false)
-
-function Selecao() {
-    isVisible.value = !isVisible.value
-
-}
 </script>
 
 <template>
