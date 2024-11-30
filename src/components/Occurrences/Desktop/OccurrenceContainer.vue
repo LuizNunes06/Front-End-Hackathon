@@ -5,10 +5,10 @@
     <div class="head-container">
       <h1>Cadastrar ocorrencia</h1>
       <div class="filtro-container">
-        <select name="Curso" id="" placeholder="Curso" class="default-filtro">
+        <select name="Curso" id="" placeholder="Curso" class="default-filter">
           <option value="" disabled selected>Curso</option>
         </select>
-        <select name="Turma" id="" class="default-filtro">
+        <select name="Turma" id="" class="default-filter">
           <option value="" disabled selected>Turma</option>
         </select>
       </div>
