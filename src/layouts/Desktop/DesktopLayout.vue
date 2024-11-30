@@ -4,31 +4,16 @@ import { AsideDesktop, HeaderDesktop } from "../../components";
 
 <template>
   <body>
-    <header>
       <HeaderDesktop />
-    </header>
-    <main>
       <AsideDesktop />
+      <div class="main-content">
       <RouterView />
-    </main>
+      </div>
   </body>
 </template>
 
 <style scoped>
-body {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "main main";
-}
-
-header {
-  grid-area: header;
-}
-
-main {
-  display: flex;
-  grid-area: main;
-  gap: 2vw;
+.main-content {
+  margin: 14vh 0 0 24vw;
 }
 </style>

@@ -1,12 +1,10 @@
 <script setup>
 import OccurrenceContainer from "./OccurrenceContainer.vue";
-import AgendaDesktop from "../../LayoutComponents/DesktopLayout/AgendaDesktop.vue";
 </script>
 
 <template>
   <div class="conteiner-conteudo">
     <OccurrenceContainer />
-    <AgendaDesktop />
   </div>
 </template>
 
