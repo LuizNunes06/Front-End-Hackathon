@@ -114,7 +114,9 @@ span {
 }
 
 h1 {
+  margin-top: 2vh;
   color: var(--darker-green);
+  margin-bottom: 2vh;
 }
 
 .Botoes {
@@ -147,6 +149,8 @@ h1 {
   border: 1px solid var(--gray);
   border-radius: 10px;
   gap: 1vh;
+  margin-left: -25vw;
+  margin-top: -7vh;
 }
 
 .Top {
