@@ -12,10 +12,10 @@ import FileDocumentAlertOutline from 'vue-material-design-icons/FileDocumentAler
             <div class="Filtros">
                 <div class="Selecao">
                     <div class="Filtro">
-                        <select name="curso" id="" class="default-filtro">
+                        <select name="curso" id="" class="default-filter">
                             <option value="">Curso</option>
                         </select>
-                        <select name="turma" id="" class="default-filtro">
+                        <select name="turma" id="" class="default-filter">
                             <option value="">Turma</option>
                         </select>
                     </div>
@@ -147,6 +147,11 @@ import FileDocumentAlertOutline from 'vue-material-design-icons/FileDocumentAler
     </div>
 </template>
 <style scoped>
+
+h1 {
+    margin-bottom: 0;
+}
+
 span.bold {
     font-weight: bold;
 }
@@ -216,7 +221,7 @@ p {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding-left: 2vw;
+    padding-left: 15vw;
 }
 
 .check-container {
@@ -271,32 +276,36 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    height: 80vh;
+    width: 70vw;
+    height: 90vh;
     border: 2px solid var(--gray);
     border-radius: 10px;
     font-family: 'Poppins';
+    margin: 0 auto;
 }
 
 .Top {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;       
     width: 100%;
-    height: 30%;
-    gap: 1rem;
+    height: 30%;   
+    margin-top: 5vh; 
+    /* gap: 1rem; */
 }
 
 .Filtros {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 4rem;
+    margin-top: 5vh;
 }
 
 .Legenda {
     display: flex;
     flex-direction: column;
-    height: 15vh;
+    height: 15vh;    
     font-size: x-small;
     border-left: 2px solid var(--gray);
     justify-content: left;
@@ -314,7 +323,7 @@ hr {
 .Selecao {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 3rem;
 }
 
 .Filtro {
