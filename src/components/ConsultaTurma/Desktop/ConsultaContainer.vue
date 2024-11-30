@@ -4,6 +4,24 @@ import TshirtCrewOutline from "vue-material-design-icons/TshirtCrewOutline.vue";
 import ClockAlertOutline from "vue-material-design-icons/ClockAlertOutline.vue";
 import CalendarAlert from "vue-material-design-icons/CalendarAlert.vue";
 import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAlertOutline.vue";
+
+import { useStudentsStore } from "@/stores/students";
+import { onMounted } from "vue";
+
+const studentStore = useStudentsStore();
+
+
+async function getStudents() {
+  await studentStore.getAllStudents();
+  console.log(studentStore.students)
+}
+onMounted(async () => {
+  await getStudents();
+});
+
+async function changeStudents(page) {
+  await studentStore.getAllStudents(page);
+}
 </script>
 <template>
   <div class="Container">
@@ -47,17 +65,7 @@ import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAler
     </div>
     <hr />
     <div class="Lista">
-      <div class="Aluno1">
-        <div class="IconInfo"></div>
-        <div class="TextInfo">
-          <p><span class="bold">Nome do Aluno</span></p>
-          <p>Matricula: 12312231223</p>
-          <p>Email: Aluno@gmail.com</p>
-          <button>Ver Detalhes</button>
-          <button>Registrar Ocorrência</button>
-        </div>
-      </div>
-      <div class="Aluno">
+      <div v-for="student of studentStore.students.results" :id="student" class="Aluno">
         <div class="IconInfo">
           <p><TshirtCrewOutline />1</p>
           <p><ClockAlertOutline />5</p>
@@ -65,39 +73,9 @@ import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAler
           <p><FileDocumentAlertOutline />2</p>
         </div>
         <div class="TextInfo">
-          <p><span class="bold">Nome do Aluno</span></p>
-          <p>Matricula: 12312231223</p>
-          <p>Email: Aluno@gmail.com</p>
-          <button>Ver Detalhes</button>
-          <button>Registrar Ocorrência</button>
-        </div>
-      </div>
-      <div class="Aluno">
-        <div class="IconInfo">
-          <p><TshirtCrewOutline />1</p>
-          <p><ClockAlertOutline />5</p>
-          <p><CalendarAlert />1</p>
-          <p><FileDocumentAlertOutline />2</p>
-        </div>
-        <div class="TextInfo">
-          <p><span class="bold">Nome do Aluno</span></p>
-          <p>Matricula: 12312231223</p>
-          <p>Email: Aluno@gmail.com</p>
-          <button>Ver Detalhes</button>
-          <button>Registrar Ocorrência</button>
-        </div>
-      </div>
-      <div class="Aluno1">
-        <div class="IconInfo">
-          <p><TshirtCrewOutline />1</p>
-          <p><ClockAlertOutline />5</p>
-          <p><CalendarAlert />1</p>
-          <p><FileDocumentAlertOutline />2</p>
-        </div>
-        <div class="TextInfo">
-          <p><span class="bold">Nome do Aluno</span></p>
-          <p>Matricula: 12312231223</p>
-          <p>Email: Aluno@gmail.com</p>
+          <p><span class="bold">{{student?.nome}}</span></p>
+          <p>Matricula: {{student?.matricula}}</p>
+          <p>Email: {{student?.email}}</p>
           <button>Ver Detalhes</button>
           <button>Registrar Ocorrência</button>
         </div>
