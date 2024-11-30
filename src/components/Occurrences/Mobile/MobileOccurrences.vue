@@ -1,14 +1,21 @@
 <script setup>
-import CalendarTextOutline from 'vue-material-design-icons/CalendarTextOutline.vue'
-import { ref } from 'vue'
-import FilterMobileComponent from '../../Form/FilterMobileComponent.vue'
+import CalendarTextOutline from "vue-material-design-icons/CalendarTextOutline.vue";
+import { ref } from "vue";
+import NavMobile from "@/components/LayoutComponents/MobileLayout/NavMobile.vue";
 
-const Others = ref(false)
+const isVisible = ref(false);
+const Others = ref(false);
+const SelectOccurrence = ref(false);
 
-function OtherCheckbox(){
-    Others.value = !Others.value
+function SelectIt() {}
+
+function Selecao() {
+  isVisible.value = !isVisible.value;
 }
 
+function OtherCheckbox() {
+  Others.value = !Others.value;
+}
 </script>
 
 <template>
@@ -72,13 +79,13 @@ function OtherCheckbox(){
 <style scoped>
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 5vh;
-    width: 100%;
-    margin-bottom: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 5vh;
+  width: 100%;
+  margin-bottom: 12vh;
 }
 
 h1 {
@@ -87,33 +94,37 @@ h1 {
 }
 
 .tipo-ocorrencia {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    width: 90%;
-    border: 2px solid var(--gray);
-    border-radius: 10px;
-    font-family: 'Poppins';
-    font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 80%;
+  padding: 0 1rem;
+  border: 2px solid var(--gray);
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-size: 18px;
 
+  & span {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .tipo-ocorrencia p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .tipo-ocorrencia:hover {
-    border: 2px solid var(--darker-green);
-    cursor: pointer;
-    scale: 1;
-    padding: 0.5vw;
-    transition: 0.2s ease-in-out;
+  border: 2px solid var(--darker-green);
+  cursor: pointer;
+  scale: 1;
+  padding: 0.5vw;
+  transition: 0.2s ease-in-out;
 }
 
 .alunos {
@@ -137,24 +148,24 @@ h1 {
     background-color: var(--lighter-gray);
     border-radius: 10px;
 }
-.selecao-ocorrencia{
-    border: 2px solid var(--gray);
-    border-radius: 10px;
-    font-family: 'Poppins';
-    font-size: 18px;
-    font-weight: normal;
-    width: 80%;
-    padding: 1rem;
-    padding-top: 0.3rem;
+.selecao-ocorrencia {
+  border: 2px solid var(--gray);
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: normal;
+  width: 80%;
+  padding: 1rem;
+  padding-top: 0.3rem;
 }
-.aluno-info{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 22px;
+.aluno-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 22px;
 }
-.container-selecao{
-    gap: 2rem;
+.container-selecao {
+  gap: 1rem;
 }
 textarea {
   height: 100%;
@@ -172,28 +183,28 @@ textarea {
     width: 100%;
     
 }
-button{
-    width:25% ;
+button {
+  width: 25%;
 }
 .check-container {
-    display: flex;
-    gap: 0.8vw;
-    align-items: center;
+  display: flex;
+  gap: 8vw;
+  align-items: center;
 
-    & input {
-        display: none;
-    }
+  & input {
+    display: none;
+  }
 
-    & input:checked+.check-customizado {
-        background-color: var(--green);
-    }
+  & input:checked + .check-customizado {
+    background-color: var(--green);
+  }
 
-    .check-customizado {
-        display: relative;
-        width: 15px;
-        height: 15px;
-        border: 1px solid var(--green);
-        display: inline;
-    }
+  .check-customizado {
+    display: relative;
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--green);
+    display: inline;
+  }
 }
 </style>
