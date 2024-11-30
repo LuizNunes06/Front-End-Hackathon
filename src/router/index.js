@@ -35,11 +35,7 @@ const router = createRouter({
       name: 'login',
       component: () => import('../views/LoginView.vue'), 
     },
-    {
-      path: '/turma',
-      name: 'turma',
-      component: () => import('../views/ConsultaTurmaView.vue'),
-      },
+
   ],
 })
 
