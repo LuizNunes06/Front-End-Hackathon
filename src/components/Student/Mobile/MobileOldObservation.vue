@@ -19,6 +19,7 @@
         <p><span>Usuário: </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore temporibus iusto tenetur, incidunt delectus quis, modi necessitatibus sint molestiae libero ad deserunt, porro praesentium. Illo, voluptatum? Consequatur itaque exercitationem similique.</p>
       </div>
     </div>
+    <router-link to="/aluno" class="link">  <button><FileMultipleOutline size="25"/> Voltar</button></router-link>
   </div>
 </main>
 </template>
@@ -27,9 +28,6 @@
 span {
   font-weight: bold;
   color: var(--darker-green);
-}
-main{
-  margin-bottom: 10vh;
 }
 .lista-coment {
   display: flex;
@@ -42,7 +40,7 @@ main{
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-top: 2rem;
+  
 }
 h1 {
   color: var(--darker-green);

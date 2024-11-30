@@ -1,14 +1,8 @@
 <script setup>
-import { ref } from 'vue'
 
-const isVisible = ref(false)
-
-function Selecao() {
-  isVisible.value = !isVisible.value
-}
 </script>
 <template>
-  <div class="filtro" v-if="!isVisible">
+  <div class="filtro">
     <select name="Turmas" id="" class="default-filter">
       <option value="" selected>Filtro</option>
       <option value="Turma">3info1</option>
@@ -21,7 +15,7 @@ function Selecao() {
 .filtro {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   border: 1px solid var(--gray);
   border-radius: 10px;
   padding: 1rem;
@@ -29,7 +23,7 @@ function Selecao() {
 
 .default-filter {
   width: 100%;
-  height: 5vh;
+  height: 8vh;
   font-family: 'Poppins';
   display: flex;
   justify-content: space-around;

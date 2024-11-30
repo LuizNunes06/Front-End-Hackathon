@@ -15,7 +15,7 @@ const toggleVisibility = () => {
 
 <template>
     <div class="logo">
-        <img src="../../../../public/logo-IF.png" alt="">
+        <img src="../../../../public/logo-IF.png" alt="" height="50px" width="100%">
         <h2>Faça login</h2>
     </div>
     <div class="container">
@@ -126,6 +126,7 @@ const toggleVisibility = () => {
         align-content: center;
         flex-direction: column;
         text-align: center;
+        width: 100%;
     }
 
     img {
