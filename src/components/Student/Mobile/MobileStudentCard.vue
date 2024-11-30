@@ -1,6 +1,6 @@
 <script setup>
+import SchollOutline from 'vue-material-design-icons/SchoolOutline.vue'
 import FileMultipleOutline from 'vue-material-design-icons/FileMultipleOutline.vue'
-
 
 </script>
 
@@ -18,30 +18,23 @@ import FileMultipleOutline from 'vue-material-design-icons/FileMultipleOutline.v
     </div>
 </div>
 <div class="botao">
-
-  <router-link to="/obsantigas" class="link">  <button><FileMultipleOutline size="25"/> Observações passadas</button></router-link>
-
-
+    <button><SchollOutline size="30"/> Emitir Boletin</button>
+    <button><FileMultipleOutline size="25"/> Observções passadas</button>
 </div>
 </template>
 
 <style scoped>
 .botao button{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--white);
-  border: 3px solid var(--darker-green);
-  border-radius: 10px;
-  color: var(--black);
-  gap: 1rem;
-  width: 100%;
-  font-size: larger;
-
-}
-.link{
-  text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border: 3px solid var(--darker-green);
+    border-radius: 10px;
+    color: var(--black);
+    gap: 1rem;
+    font-size: larger;
 }
 .botao{
     display: flex;
@@ -74,5 +67,4 @@ import FileMultipleOutline from 'vue-material-design-icons/FileMultipleOutline.v
 .aluno-info{
     margin-left: 2vw;
 }
-
 </style>
