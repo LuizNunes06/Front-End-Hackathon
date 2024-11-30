@@ -5,22 +5,31 @@ import ClockAlertOutline from "vue-material-design-icons/ClockAlertOutline.vue";
 import CalendarAlert from "vue-material-design-icons/CalendarAlert.vue";
 import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAlertOutline.vue";
 
-import { useStudentsStore, useClassesStore, useCoursesStore } from "@/stores";
+import {
+  useStudentsStore,
+  useClassesStore,
+  useCoursesStore,
+  useGradesStore,
+  useOccurrencesStore,
+} from "@/stores";
 
 import { onMounted, reactive } from "vue";
 
 const studentStore = useStudentsStore();
 const classesStore = useClassesStore();
 const coursesStore = useCoursesStore();
+const gradesStore = useGradesStore();
+const occurrencesStore = useOccurrencesStore();
 
 async function getInformations(classId, course, name) {
   await studentStore.getAllStudents(classId, course, name);
   await classesStore.getAllClasses();
   await coursesStore.getAllCourses();
-  console.log(studentStore)
+  await gradesStore.getAllGrades();
+  await occurrencesStore.getAllOccurrences();
 }
 onMounted(async () => {
-  await getInformations(filters.class, filters.course, filters.name );
+  await getInformations(filters.class, filters.course, filters.name);
 });
 
 const filters = reactive({
@@ -33,6 +42,10 @@ async function FilterStudents(classId, course, name) {
   console.log(classId, course, name);
   await studentStore.getAllStudents(classId, course, name);
 }
+
+// function notaBaixa(matricula) {
+//   const qtd = gradesStore.filter(Aluno.results => Aluno.matricula = matricula && Aluno.gra)
+// }
 </script>
 <template>
   <div class="Container">
@@ -89,7 +102,9 @@ async function FilterStudents(classId, course, name) {
           <p><FileDocumentAlertOutline size="20" class="Torto" />Outros</p>
         </div>
       </div>
-      <button @click="FilterStudents(filters.class, filters.course, filters.name)">Filtrar</button>
+      <button @click="FilterStudents(filters.class, filters.course, filters.name)">
+        Filtrar
+      </button>
     </div>
     <hr />
     <div class="Lista">
@@ -114,7 +129,7 @@ async function FilterStudents(classId, course, name) {
   </div>
 </template>
 <style scoped>
-a{
+a {
   text-decoration: none;
   color: var(--white);
 }
