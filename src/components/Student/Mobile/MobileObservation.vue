@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 
-
 const Others = ref(false)
 
 function OtherCheckbox() {

@@ -5,21 +5,31 @@ import ClockAlertOutline from "vue-material-design-icons/ClockAlertOutline.vue";
 import CalendarAlert from "vue-material-design-icons/CalendarAlert.vue";
 import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAlertOutline.vue";
 
-import { useStudentsStore, useClassesStore, useCoursesStore } from "@/stores";
+import {
+  useStudentsStore,
+  useClassesStore,
+  useCoursesStore,
+  useGradesStore,
+  useOccurrencesStore,
+} from "@/stores";
 
 import { onMounted, reactive } from "vue";
 
 const studentStore = useStudentsStore();
 const classesStore = useClassesStore();
 const coursesStore = useCoursesStore();
+const gradesStore = useGradesStore();
+const occurrencesStore = useOccurrencesStore();
 
 async function getInformations(classId, course, name) {
   await studentStore.getAllStudents(classId, course, name);
   await classesStore.getAllClasses();
   await coursesStore.getAllCourses();
+  await gradesStore.getAllGrades();
+  await occurrencesStore.getAllOccurrences();
 }
 onMounted(async () => {
-  await getInformations(filters.class, filters.course, filters.name );
+  await getInformations(filters.class, filters.course, filters.name);
 });
 
 const filters = reactive({
@@ -32,6 +42,10 @@ async function FilterStudents(classId, course, name) {
   console.log(classId, course, name);
   await studentStore.getAllStudents(classId, course, name);
 }
+
+// function notaBaixa(matricula) {
+//   const qtd = gradesStore.filter(Aluno.results => Aluno.matricula = matricula && Aluno.gra)
+// }
 </script>
 <template>
   <div class="Container">
@@ -40,7 +54,7 @@ async function FilterStudents(classId, course, name) {
       <div class="Filtros">
         <div class="Selecao">
           <div class="Filtro">
-            <select name="curso" id="" class="default-filtro" v-model="filters.course">
+            <select name="curso" id="" class="default-filter" v-model="filters.course">
               <option
                 v-for="course of coursesStore.courses.results"
                 :key="course.id"
@@ -49,7 +63,7 @@ async function FilterStudents(classId, course, name) {
                 {{ course.abreviatura }}
               </option>
             </select>
-            <select name="turma" id="" class="default-filtro" v-model="filters.class">
+            <select name="turma" id="" class="default-filter" v-model="filters.class">
               <option
                 v-for="classActual of classesStore.classes.results"
                 :key="classActual.id"
@@ -88,8 +102,9 @@ async function FilterStudents(classId, course, name) {
           <p><FileDocumentAlertOutline size="20" class="Torto" />Outros</p>
         </div>
       </div>
-
-      <button @click="FilterStudents(filters.class, filters.course, filters.name)">Filtrar</button>
+      <button @click="FilterStudents(filters.class, filters.course, filters.name)">
+        Filtrar
+      </button>
     </div>
     <hr />
     <div class="Lista">
@@ -107,13 +122,18 @@ async function FilterStudents(classId, course, name) {
           <p>Matricula: {{ student?.matricula }}</p>
           <p>Email: {{ student?.email }}</p>
           <button>Ver Detalhes</button>
-          <button>Registrar Ocorrência</button>
+          <button><router-link to="/"> Registrar Ocorrência</router-link></button>
         </div>
       </div>
     </div>
   </div>
 </template>
 <style scoped>
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
 span.bold {
   font-weight: bold;
 }

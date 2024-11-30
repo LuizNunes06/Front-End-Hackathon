@@ -1,11 +1,8 @@
 <script setup>
-import SquareRoundedOutline from 'vue-material-design-icons/SquareRoundedOutline.vue'
-import TshirtCrewOutline from 'vue-material-design-icons/TshirtCrewOutline.vue'
-import ClockAlertOutline from 'vue-material-design-icons/ClockAlertOutline.vue'
-import CalendarAlert from 'vue-material-design-icons/CalendarAlert.vue'
-import FileDocumentAlertOutline from 'vue-material-design-icons/FileDocumentAlertOutline.vue'
+import ConsultaContainer from "./ConsultaContainer.vue";
 </script>
 <template>
+
     <div class="Container">
         <div class="Top">
             <h1>Consulta de Turma</h1>
