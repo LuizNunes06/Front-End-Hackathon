@@ -1,9 +1,9 @@
 <script setup>
-import SquareRoundedOutline from "vue-material-design-icons/SquareRoundedOutline.vue";
-import TshirtCrewOutline from "vue-material-design-icons/TshirtCrewOutline.vue";
-import ClockAlertOutline from "vue-material-design-icons/ClockAlertOutline.vue";
-import CalendarAlert from "vue-material-design-icons/CalendarAlert.vue";
-import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAlertOutline.vue";
+import SquareRoundedOutline from 'vue-material-design-icons/SquareRoundedOutline.vue'
+import TshirtCrewOutline from 'vue-material-design-icons/TshirtCrewOutline.vue'
+import ClockAlertOutline from 'vue-material-design-icons/ClockAlertOutline.vue'
+import CalendarAlert from 'vue-material-design-icons/CalendarAlert.vue'
+import FileDocumentAlertOutline from 'vue-material-design-icons/FileDocumentAlertOutline.vue'
 </script>
 <template>
   <div class="Container">
@@ -35,7 +35,7 @@ import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAler
             </div>
           </div>
         </div>
-        <div class="Legenda">
+        <div class="legenda">
           <p><SquareRoundedOutline size="20" />Notas Acima de 6</p>
           <p><SquareRoundedOutline size="20" fill-color="red" />Notas Abaixo de 6</p>
           <p><TshirtCrewOutline size="20" class="Torto1" />Sem uniforme</p>
@@ -46,10 +46,27 @@ import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAler
       </div>
     </div>
     <hr />
-    <div class="Lista">
-      <div class="Aluno1">
-        <div class="IconInfo"></div>
-        <div class="TextInfo">
+    <div class="lista">
+      <div class="aluno">
+        <div class="icon-info"></div>
+        <div class="text-info">
+          <p><span class="bold">Nome do Aluno</span></p>
+          <p>Matricula: 12312231223</p>
+          <p>Email: Aluno@gmail.com</p>
+          <button>
+            <router-link to="#"> Ver Detalhes </router-link>
+          </button>
+          <button>Registrar Ocorrência</button>
+        </div>
+      </div>
+      <div class="aluno">
+        <div class="icon-info">
+          <p><TshirtCrewOutline />1</p>
+          <p><ClockAlertOutline />5</p>
+          <p><CalendarAlert />1</p>
+          <p><FileDocumentAlertOutline />2</p>
+        </div>
+        <div class="text-info">
           <p><span class="bold">Nome do Aluno</span></p>
           <p>Matricula: 12312231223</p>
           <p>Email: Aluno@gmail.com</p>
@@ -57,14 +74,14 @@ import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAler
           <button>Registrar Ocorrência</button>
         </div>
       </div>
-      <div class="Aluno">
-        <div class="IconInfo">
+      <div class="aluno">
+        <div class="icon-info">
           <p><TshirtCrewOutline />1</p>
           <p><ClockAlertOutline />5</p>
           <p><CalendarAlert />1</p>
           <p><FileDocumentAlertOutline />2</p>
         </div>
-        <div class="TextInfo">
+        <div class="text-info">
           <p><span class="bold">Nome do Aluno</span></p>
           <p>Matricula: 12312231223</p>
           <p>Email: Aluno@gmail.com</p>
@@ -72,29 +89,14 @@ import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAler
           <button>Registrar Ocorrência</button>
         </div>
       </div>
-      <div class="Aluno">
-        <div class="IconInfo">
+      <div class="aluno">
+        <div class="icon-info">
           <p><TshirtCrewOutline />1</p>
           <p><ClockAlertOutline />5</p>
           <p><CalendarAlert />1</p>
           <p><FileDocumentAlertOutline />2</p>
         </div>
-        <div class="TextInfo">
-          <p><span class="bold">Nome do Aluno</span></p>
-          <p>Matricula: 12312231223</p>
-          <p>Email: Aluno@gmail.com</p>
-          <button>Ver Detalhes</button>
-          <button>Registrar Ocorrência</button>
-        </div>
-      </div>
-      <div class="Aluno1">
-        <div class="IconInfo">
-          <p><TshirtCrewOutline />1</p>
-          <p><ClockAlertOutline />5</p>
-          <p><CalendarAlert />1</p>
-          <p><FileDocumentAlertOutline />2</p>
-        </div>
-        <div class="TextInfo">
+        <div class="text-info">
           <p><span class="bold">Nome do Aluno</span></p>
           <p>Matricula: 12312231223</p>
           <p>Email: Aluno@gmail.com</p>
@@ -107,7 +109,7 @@ import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAler
 </template>
 <style scoped>
 span.bold {
-  font-weight: bold;
+  font-weight: 600;
 }
 .Torto1 {
   margin-left: -2vh;
@@ -115,7 +117,7 @@ span.bold {
 .Torto {
   margin-left: -5.2vh;
 }
-.IconInfo {
+.icon-info {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -123,7 +125,7 @@ span.bold {
   left: 1rem;
 }
 
-.Aluno {
+.aluno {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -134,7 +136,9 @@ span.bold {
   border-radius: 1rem;
   align-items: center;
   justify-content: center;
-  margin: 2vh auto;}
+  margin: 2vh auto;
+  padding: 1vw 0;
+}
 
 .Aluno1 {
   position: relative;
@@ -150,7 +154,7 @@ span.bold {
   margin: 2vh auto;
 }
 
-.TextInfo {
+.text-info {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -165,7 +169,7 @@ p {
   margin: 0;
 }
 
-.Lista {
+.lista {
   display: grid;
   grid-template-columns: 1fr 1fr;
   -ms-grid-column-align: stretch;
@@ -216,6 +220,8 @@ p {
 
 h1 {
   color: var(--darker-green);
+  font-weight: 600;
+  margin-top: 1vw;
 }
 
 hr {
@@ -231,7 +237,7 @@ hr {
   height: 80vh;
   border: 2px solid var(--gray);
   border-radius: 10px;
-  font-family: "Poppins";
+  font-family: 'Poppins';
 }
 
 .Top {
@@ -249,7 +255,7 @@ hr {
   gap: 4rem;
 }
 
-.Legenda {
+.legenda {
   display: flex;
   flex-direction: column;
   height: 15vh;
@@ -258,7 +264,7 @@ hr {
   justify-content: left;
 }
 
-.Legenda p {
+.legenda p {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -277,5 +283,10 @@ hr {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
 }
 </style>

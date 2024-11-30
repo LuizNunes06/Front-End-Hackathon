@@ -1,8 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-
-import Eye from "vue-material-design-icons/Eye.vue";
-import EyeClosed from "vue-material-design-icons/EyeClosed.vue";
+import { Eye, EyeOff } from '@/components/icons/index'
 
 const isVisible = ref(false);
 
@@ -22,14 +20,14 @@ const toggleVisibility = () => {
     <div class="container">
         <div class="form">
             <label for="email">Email</label>
-            <input type="text" id="email">
+            <input type="text" id="email" >
 
             <label for="senha">Senha</label>
             <div class="container-senha">
                 <input :type="isVisible ? 'text' : 'password'" id="senha">
                 <label @click="toggleVisibility">
                     <Eye v-if="isVisible"/>
-                    <EyeClosed v-else/>
+                    <EyeOff v-else/>
                 </label>
             </div>
 
@@ -39,6 +37,10 @@ const toggleVisibility = () => {
 </template>
 
 <style scoped>
+h1 {
+    font-weight: 400;
+}
+
     .container {
         display: flex;
         flex-direction: column;
@@ -118,8 +120,8 @@ const toggleVisibility = () => {
     input {
         border: 1px solid var(--gray);
         border-radius: 6px;
-        padding: 0 2%;
-        font-size: 1.2rem;
+        padding: 0 4%;
+        font-size: 1rem;
     }
 
     .logo {

@@ -29,7 +29,7 @@ import { RouterLink } from "vue-router";
   width: 20vw;
   border-right: 2px solid var(--gray);
   height: 100%;
-  font-size: larger;
+  font-size: 1.1em;
   padding-top: 4vh;
   gap: 1.6vh;
 }

@@ -11,7 +11,7 @@ function expand(e) {
     <div class="Top">
       <h1>Consultar Histórico</h1>
       <div class="Filtros">
-        <div class="Lista">
+        <div class="lista">
           <select class="default-filtro" name="Curso" id="">
             <option value="">Curso</option>
           </select>
@@ -19,7 +19,7 @@ function expand(e) {
             <option value="">Turma</option>
           </select>
         </div>
-        <div class="Lista">
+        <div class="lista">
           <select class="default-filtro" name="Ano" id="">
             <option value="">Ano</option>
           </select>
@@ -115,6 +115,8 @@ span {
 
 h1 {
   color: var(--darker-green);
+  font-weight: 600;
+  margin-top: 1vw;
 }
 
 .Botoes {
@@ -124,7 +126,7 @@ h1 {
   gap: 1rem;
 }
 
-.Lista {
+.lista {
   display: flex;
   flex-direction: row;
   align-items: center;

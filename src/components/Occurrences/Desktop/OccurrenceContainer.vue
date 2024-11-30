@@ -1,9 +1,8 @@
 <script setup></script>
-
 <template>
   <div class="container">
     <div class="head-container">
-      <h1>Cadastrar ocorrencia</h1>
+      <h1>Cadastrar ocorrência</h1>
       <div class="filtro-container">
         <select name="Curso" id="" placeholder="Curso" class="default-filtro">
           <option value="" disabled selected>Curso</option>
@@ -16,7 +15,7 @@
     <div class="list-container">
       <span class="card-aluno">
         <input type="checkbox" id="studant" />
-        <label for="studant">Isadora Alcantara Xavier da Silva</label>
+        <label class="studant-name" for="studant">Isadora Alcantara Xavier da Silva</label>
       </span>
     </div>
     <div class="occurence-form">
@@ -42,6 +41,7 @@
       </span>
 
       <textarea rows="" cols=""></textarea>
+      <button class="send-button">Enviar</button>
     </div>
   </div>
 </template>
@@ -60,7 +60,7 @@ h1 {
     "head head"
     "list form";
   border: 1px solid var(--gray);
-  width: 50vw;
+  width: 55vw;
   height: 80vh;
   border-radius: 10px;
 }
@@ -94,17 +94,12 @@ h1 {
     display: none;
   }
 
-  & label {
-    border-radius: 1rem;
-    display: block;
-    padding: 1rem;
-  }
-
   & input:checked + label {
     background-color: var(--lighter-gray);
     transition: all 0.2s ease-in-out;
   }
 }
+
 .occurence-form {
   grid-area: form;
   display: flex;
@@ -115,7 +110,7 @@ h1 {
 }
 
 textarea {
-  height: 100%;
+  height: 15vw;
   width: calc(100% - 2rem);
   resize: none;
   border-color: var(--gray);
@@ -123,10 +118,20 @@ textarea {
   outline: none;
   padding: 1rem;
 }
+
+.send-button {
+  display: flex;
+  justify-content: center;
+  align-self: self-end;
+  background-color: var(--darker-green);
+  width: 25%;
+}
+
 .check-container {
   display: flex;
   gap: 0.8vw;
   align-items: center;
+  font-size: .8em;
 
   & input {
     display: none;
@@ -143,5 +148,17 @@ textarea {
     border: 1px solid var(--green);
     display: inline;
   }
+}
+
+.studant-name {
+  height: 5vh;
+  border-radius: 10px;
+  display: flex !important;
+  padding-left: 0.7vw;
+  align-items: center;
+}
+
+.studant-name:hover {
+  background-color: var(--lighter-gray);
 }
 </style>
