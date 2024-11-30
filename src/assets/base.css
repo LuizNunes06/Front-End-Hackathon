@@ -12,6 +12,7 @@
 
 body{
     margin: 0;
+    overflow-x: hidden;
 }
 
 button {
@@ -24,10 +25,10 @@ button {
     cursor: pointer;
 }
 
-.default-filtro {
+.default-filter {
     outline: none;
     width: 10vw;
-    padding: .6rem .2rem;
+    padding: .6rem .10rem;
     color: var(--darker-gray);
     border: var(--gray) 1px solid;
     background-color: var(--white);
