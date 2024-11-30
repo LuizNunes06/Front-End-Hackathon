@@ -29,12 +29,6 @@ const router = createRouter({
             component: () => import('../views/StudentView.vue'),
           },
           {
-            path:  '/notas',
-            name:   'notas',
-            component: () => import('../components/Student/Mobile/MobileGrades.vue')
-          }
-          ,
-          {
             path:  '/obsantigas',
             name:   'obsantigas',
             component: () => import('../components/Student/Mobile/MobileOldObservation.vue')

@@ -2,7 +2,6 @@
 import ClipBoardAlert from "vue-material-design-icons/ClipboardAlert.vue";
 import History from "vue-material-design-icons/History.vue";
 import Account from "vue-material-design-icons/Account.vue";  
-import AccountGroup from "vue-material-design-icons/AccountGroup.vue";  
 
 import { RouterLink } from "vue-router";
 
@@ -14,9 +13,8 @@ import { RouterLink } from "vue-router";
         </div>
         <div class="Acoes">
             <RouterLink class="link" to="/"><ClipBoardAlert size="30"/> Ocorrências</RouterLink>
-            <RouterLink class="link" to="/sadasd"><History size="30"/>Histórico de Conselhos</RouterLink>
-            <RouterLink class="link" to="/sadasd"><Account size="30"/>Consultar Turma</RouterLink>
-            <RouterLink class="link" to="/sadasd"><AccountGroup size="30"/>Consultar Aluno</RouterLink>
+            <RouterLink class="link" to="/historico"><History size="30"/>Histórico de Conselhos</RouterLink>
+            <RouterLink class="link" to="/turma"><Account size="30"/>Consultar Turma</RouterLink>
         </div>
     </div>
 </template>
