@@ -1,5 +1,5 @@
 <script setup>
-import { DesktopOccurences, MobileOccurences } from "./index.js";
+import { DesktopOccurrences, MobileOccurrences } from "./index.js";
 
 import { useScreen } from "../../composables";
 

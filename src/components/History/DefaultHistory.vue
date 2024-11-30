@@ -1,5 +1,5 @@
 <script setup>
-import { DesktopClass, MobileClass } from "./index.js";
+import { DesktopHistory, MobileHistory } from "./index.js";
 
 import { useScreen } from "../../composables";
 
