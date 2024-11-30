@@ -1,8 +1,16 @@
 <script setup>
+import { ref } from 'vue'
+
+const isVisible = ref(false)
+
+function Selecao() {
+    isVisible.value = !isVisible.value
+
+}
 </script>
 
 <template>
-  <div class="container">
+  <div class="container" >
     <h1>Observações</h1>
     <textarea rows="" cols=""></textarea>
     <div class="observation-form">

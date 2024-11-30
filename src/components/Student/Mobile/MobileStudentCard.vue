@@ -2,6 +2,7 @@
 import SchollOutline from 'vue-material-design-icons/SchoolOutline.vue'
 import FileMultipleOutline from 'vue-material-design-icons/FileMultipleOutline.vue'
 
+
 </script>
 
 <template>
@@ -18,29 +19,39 @@ import FileMultipleOutline from 'vue-material-design-icons/FileMultipleOutline.v
     </div>
 </div>
 <div class="botao">
-    <button><SchollOutline size="30"/> Emitir Boletin</button>
-    <button><FileMultipleOutline size="25"/> Observções passadas</button>
+
+  <router-link to="/notas" class="link"> <button  ><SchollOutline size="30"/> Emitir Bolteim </button></router-link>
+  <router-link to="/obsantigas" class="link">  <button><FileMultipleOutline size="25"/> Observações passadas</button></router-link>
+ 
+
 </div>
 </template>
 
 <style scoped>
 .botao button{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--white);
-    border: 3px solid var(--darker-green);
-    border-radius: 10px;
-    color: var(--black);
-    gap: 1rem;
-    font-size: larger;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border: 3px solid var(--darker-green);
+  border-radius: 10px;
+  color: var(--black);
+  gap: 1rem;
+  width: 100%;
+  font-size: larger;
+
+}
+.link{
+  text-decoration: none;
 }
 .botao{
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 80%;
+    outline: none;
+
 }
 .container{
     display: flex;
@@ -65,4 +76,5 @@ import FileMultipleOutline from 'vue-material-design-icons/FileMultipleOutline.v
 .aluno-info{
     margin-left: 2vw;
 }
+
 </style>

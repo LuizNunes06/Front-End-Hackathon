@@ -1,12 +1,17 @@
 <script setup>
 import MobileStudentCard from './MobileStudentCard.vue';
 import MobileObservation from './MobileObservation.vue';
+
+
+
 </script>
 <template>
     <main>
         <h1>Consultar Aluno</h1>
         <MobileStudentCard />
         <MobileObservation />
+
+
     </main>
 </template>
 <style scoped>
