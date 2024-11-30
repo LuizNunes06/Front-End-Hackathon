@@ -19,9 +19,10 @@
 <style scoped>
 
     .container {
+        padding: 4vh 2vw;
         display: flex;
         height: 50vh;
-        justify-content: center;
+        width: 20vw;
         align-items: center;
         text-align: center;
         flex-direction: column;

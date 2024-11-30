@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from 'vue';
+// import { router } from '@/router';
+
+import { useAuthStore } from '@/stores/auth'; // Import the Pinia store
 
 import Eye from "vue-material-design-icons/Eye.vue";
 import EyeClosed from "vue-material-design-icons/EyeClosed.vue";
@@ -8,8 +11,29 @@ const isVisible = ref(false);
 
 const toggleVisibility = () => {
     isVisible.value = !isVisible.value;
-    console.log(isVisible)
 }
+
+// Local state for the form
+const email = ref('');
+const password = ref('');
+
+// Access the authentication store
+const authStore = useAuthStore();
+
+// Handle the login process
+const login = async () => {
+  try {
+    await authStore.login({ email: email.value, password: password.value });
+    alert('Login successful!');
+    // router.push('/');
+  } catch (error) {
+    alert('Login failed. Please check your credentials.');
+    console.error('Error:', error);
+    console.log("email:" + email.value, "senha:" + password.value);
+    
+  }
+};
+
 
 </script>
 
@@ -22,18 +46,18 @@ const toggleVisibility = () => {
     <div class="container">
         <div class="form">
             <label for="email">Email</label>
-            <input type="text" id="email">
+            <input type="text" id="email" v-model="email">
 
             <label for="senha">Senha</label>
             <div class="container-senha">
-                <input :type="isVisible ? 'text' : 'password'" id="senha">
+                <input :type="isVisible ? 'text' : 'password'" id="senha" v-model="password">
                 <label @click="toggleVisibility">
                     <Eye v-if="isVisible"/>
                     <EyeClosed v-else/>
                 </label>
             </div>
 
-            <button>Enviar</button>
+            <button @click="login()">Enviar</button>
         </div>
     </div>
 </template>

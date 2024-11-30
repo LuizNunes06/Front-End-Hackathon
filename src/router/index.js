@@ -27,13 +27,13 @@ const router = createRouter({
             path: '/aluno',
             name: 'aluno',
             component: () => import('../views/StudentView.vue'),
-          }
+          },
       ],
     },
     {
       path: '/login',
       name: 'login',
-      component: () => import('../views/LoginView.vue'), 
+      component: () => import('../views/LoginView.vue'),
     },
   ],
 })

@@ -4,6 +4,48 @@ import TshirtCrewOutline from "vue-material-design-icons/TshirtCrewOutline.vue";
 import ClockAlertOutline from "vue-material-design-icons/ClockAlertOutline.vue";
 import CalendarAlert from "vue-material-design-icons/CalendarAlert.vue";
 import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAlertOutline.vue";
+
+import {
+  useStudentsStore,
+  useClassesStore,
+  useCoursesStore,
+  useGradesStore,
+  useOccurrencesStore,
+} from "@/stores";
+
+import { onMounted, reactive } from "vue";
+
+const studentStore = useStudentsStore();
+const classesStore = useClassesStore();
+const coursesStore = useCoursesStore();
+const gradesStore = useGradesStore();
+const occurrencesStore = useOccurrencesStore();
+
+async function getInformations(classId, course, name) {
+  await studentStore.getAllStudents(classId, course, name);
+  await classesStore.getAllClasses();
+  await coursesStore.getAllCourses();
+  await gradesStore.getAllGrades();
+  await occurrencesStore.getAllOccurrences();
+}
+onMounted(async () => {
+  await getInformations(filters.class, filters.course, filters.name);
+});
+
+const filters = reactive({
+  course: null,
+  class: null,
+  name: "",
+});
+
+async function FilterStudents(classId, course, name) {
+  console.log(classId, course, name);
+  await studentStore.getAllStudents(classId, course, name);
+}
+
+// function notaBaixa(matricula) {
+//   const qtd = gradesStore.filter(Aluno.results => Aluno.matricula = matricula && Aluno.gra)
+// }
 </script>
 <template>
   <div class="Container">
@@ -11,16 +53,32 @@ import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAler
       <h1>Consulta de Turma</h1>
       <div class="Filtros">
         <div class="Selecao">
-          <div class="Filtro">
-            <select name="curso" id="" class="default-filtro">
-              <option value="">Curso</option>
+          <d  iv class="filtro">
+            <select name="curso" id="" class="default-filter" v-model="filters.course">
+              <option
+                v-for="course of coursesStore.courses.results"
+                :key="course.id"
+                :value="course.id"
+              >
+                {{ course.abreviatura }}
+              </option>
             </select>
-            <select name="turma" id="" class="default-filtro">
-              <option value="">Turma</option>
+            <select name="turma" id="" class="default-filter" v-model="filters.class">
+              <option
+                v-for="classActual of classesStore.classes.results"
+                :key="classActual.id"
+                :value="classActual.id"
+              >
+                {{
+                  classActual.ano +
+                  classActual.curso.abreviatura +
+                  (classActual.numeracao ? classActual.numeracao : "")
+                }}
+              </option>
             </select>
-          </div>
+          </d>
           <div class="Especificacao">
-            <input type="text" class="Nome" placeholder="Nome" />
+            <input type="text" class="Nome" placeholder="Nome" v-model="filters.name" />
             <div class="check-list">
               <span class="check-container">
                 <input type="checkbox" id="text" class="check-texto" />
@@ -44,20 +102,13 @@ import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAler
           <p><FileDocumentAlertOutline size="20" class="Torto" />Outros</p>
         </div>
       </div>
+      <button @click="FilterStudents(filters.class, filters.course, filters.name)">
+        Filtrar
+      </button>
     </div>
     <hr />
     <div class="Lista">
-      <div class="Aluno1">
-        <div class="IconInfo"></div>
-        <div class="TextInfo">
-          <p><span class="bold">Nome do Aluno</span></p>
-          <p>Matricula: 12312231223</p>
-          <p>Email: Aluno@gmail.com</p>
-          <button>Ver Detalhes</button>
-          <button>Registrar Ocorrência</button>
-        </div>
-      </div>
-      <div class="Aluno">
+      <div v-for="student of studentStore.students.results" :id="student" class="Aluno">
         <div class="IconInfo">
           <p><TshirtCrewOutline />1</p>
           <p><ClockAlertOutline />5</p>
@@ -65,47 +116,24 @@ import FileDocumentAlertOutline from "vue-material-design-icons/FileDocumentAler
           <p><FileDocumentAlertOutline />2</p>
         </div>
         <div class="TextInfo">
-          <p><span class="bold">Nome do Aluno</span></p>
-          <p>Matricula: 12312231223</p>
-          <p>Email: Aluno@gmail.com</p>
+          <p>
+            <span class="bold">{{ student?.nome }}</span>
+          </p>
+          <p>Matricula: {{ student?.matricula }}</p>
+          <p>Email: {{ student?.email }}</p>
           <button>Ver Detalhes</button>
-          <button>Registrar Ocorrência</button>
-        </div>
-      </div>
-      <div class="Aluno">
-        <div class="IconInfo">
-          <p><TshirtCrewOutline />1</p>
-          <p><ClockAlertOutline />5</p>
-          <p><CalendarAlert />1</p>
-          <p><FileDocumentAlertOutline />2</p>
-        </div>
-        <div class="TextInfo">
-          <p><span class="bold">Nome do Aluno</span></p>
-          <p>Matricula: 12312231223</p>
-          <p>Email: Aluno@gmail.com</p>
-          <button>Ver Detalhes</button>
-          <button>Registrar Ocorrência</button>
-        </div>
-      </div>
-      <div class="Aluno1">
-        <div class="IconInfo">
-          <p><TshirtCrewOutline />1</p>
-          <p><ClockAlertOutline />5</p>
-          <p><CalendarAlert />1</p>
-          <p><FileDocumentAlertOutline />2</p>
-        </div>
-        <div class="TextInfo">
-          <p><span class="bold">Nome do Aluno</span></p>
-          <p>Matricula: 12312231223</p>
-          <p>Email: Aluno@gmail.com</p>
-          <button>Ver Detalhes</button>
-          <button>Registrar Ocorrência</button>
+          <button><router-link to="/"> Registrar Ocorrência</router-link></button>
         </div>
       </div>
     </div>
   </div>
 </template>
 <style scoped>
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
 span.bold {
   font-weight: bold;
 }
@@ -134,7 +162,8 @@ span.bold {
   border-radius: 1rem;
   align-items: center;
   justify-content: center;
-  margin: 2vh auto;}
+  margin: 2vh auto;
+}
 
 .Aluno1 {
   position: relative;
@@ -216,6 +245,7 @@ p {
 
 h1 {
   color: var(--darker-green);
+  margin: 0;
 }
 
 hr {
@@ -238,8 +268,10 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   width: 100%;
-  padding-bottom: 2vh;
+  padding: 2vh 0;
+  height: 30vh;
   gap: 1rem;
 }
 
@@ -273,7 +305,7 @@ hr {
   gap: 1rem;
 }
 
-.Filtro {
+.filtro {
   display: flex;
   flex-direction: row;
   gap: 1rem;

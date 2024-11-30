@@ -3,12 +3,12 @@
 <template>
   <div class="container">
     <div class="head-container">
-      <h1>Cadastrar ocorrencia</h1>
+      <h1>Cadastrar ocorrência</h1>
       <div class="filtro-container">
-        <select name="Curso" id="" placeholder="Curso" class="default-filtro">
+        <select name="Curso" id="" placeholder="Curso" class="default-filter">
           <option value="" disabled selected>Curso</option>
         </select>
-        <select name="Turma" id="" class="default-filtro">
+        <select name="Turma" id="" class="default-filter">
           <option value="" disabled selected>Turma</option>
         </select>
       </div>
@@ -50,9 +50,11 @@
 h1 {
   color: var(--darker-green);
   font-weight: 600;
+  margin: 0;
 }
 
 .container {
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 3fr;
@@ -73,16 +75,19 @@ h1 {
 .head-container {
   grid-area: head;
   border-bottom: 1px solid var(--gray);
-  gap: 4vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 20vh;
+  gap: 5vh;
 }
+
 .list-container {
   grid-area: list;
   border-right: 1px solid var(--gray);
   width: 100%;
+  height: 100%;
 
   & .card-aluno {
     display: block;
@@ -105,6 +110,7 @@ h1 {
     transition: all 0.2s ease-in-out;
   }
 }
+
 .occurence-form {
   grid-area: form;
   display: flex;
@@ -112,6 +118,7 @@ h1 {
   padding: 1rem 2rem;
   gap: 1.5vh;
   font-size: 1.2rem;
+  height: 90%;
 }
 
 textarea {
